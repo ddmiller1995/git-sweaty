@@ -6641,5 +6641,18 @@
     "start_date_local": "2026-03-21T14:23:02Z",
     "type": "RockClimbing",
     "year": 2026
+  },
+  {
+    "date": "2026-03-22",
+    "distance": 37383.1,
+    "elevation_gain": 291.0,
+    "id": "17821643783",
+    "moving_time": 6516.0,
+    "name": "Cherry blossom ride \ud83c\udf38",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-03-22T11:51:29Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
