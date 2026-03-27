@@ -4607,6 +4607,15 @@
       "type": "Ride",
       "url": "https://www.strava.com/activities/17821643783",
       "year": 2026
+    },
+    {
+      "date": "2026-03-26",
+      "hour": 11,
+      "name": "Smith w Blum",
+      "subtype": "RockClimbing",
+      "type": "RockClimbing",
+      "url": "https://www.strava.com/activities/17872821901",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -9020,6 +9029,15 @@
           "distance": 0.0,
           "elevation_gain": 0.0,
           "moving_time": 3900.0
+        },
+        "2026-03-26": {
+          "activity_ids": [
+            "17872821901"
+          ],
+          "count": 1,
+          "distance": 3164.0,
+          "elevation_gain": 90.0,
+          "moving_time": 2745.0
         }
       },
       "Walk": {
@@ -9183,7 +9201,7 @@
       }
     }
   },
-  "generated_at": "2026-03-26T16:09:22.983668+00:00",
+  "generated_at": "2026-03-27T15:48:44.344926+00:00",
   "other_bucket": "OtherSports",
   "profile_url": "https://www.strava.com/athletes/21683158",
   "repo": "ddmiller1995/git-sweaty",
