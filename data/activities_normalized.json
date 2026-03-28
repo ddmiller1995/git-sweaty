@@ -6667,5 +6667,18 @@
     "start_date_local": "2026-03-26T11:57:40Z",
     "type": "RockClimbing",
     "year": 2026
+  },
+  {
+    "date": "2026-03-27",
+    "distance": 3629.3,
+    "elevation_gain": 144.0,
+    "id": "17882722037",
+    "moving_time": 3364.0,
+    "name": "Day #2",
+    "raw_activity_type": "RockClimbing",
+    "raw_type": "RockClimbing",
+    "start_date_local": "2026-03-27T09:54:14Z",
+    "type": "RockClimbing",
+    "year": 2026
   }
 ]
