@@ -4625,6 +4625,15 @@
       "type": "RockClimbing",
       "url": "https://www.strava.com/activities/17882722037",
       "year": 2026
+    },
+    {
+      "date": "2026-03-28",
+      "hour": 11,
+      "name": "Lunch Nordic Ski",
+      "subtype": "NordicSki",
+      "type": "NordicSki",
+      "url": "https://www.strava.com/activities/17893469534",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -8727,6 +8736,17 @@
           "moving_time": 17489.0
         }
       },
+      "NordicSki": {
+        "2026-03-28": {
+          "activity_ids": [
+            "17893469534"
+          ],
+          "count": 1,
+          "distance": 7066.5,
+          "elevation_gain": 74.0,
+          "moving_time": 5228.0
+        }
+      },
       "Ride": {
         "2026-01-10": {
           "activity_ids": [
@@ -9219,7 +9239,7 @@
       }
     }
   },
-  "generated_at": "2026-03-28T15:27:33.222969+00:00",
+  "generated_at": "2026-03-29T15:27:33.525630+00:00",
   "other_bucket": "OtherSports",
   "profile_url": "https://www.strava.com/athletes/21683158",
   "repo": "ddmiller1995/git-sweaty",
@@ -9233,6 +9253,10 @@
     "Hike": {
       "accent": "#d6ff6b",
       "label": "Hike"
+    },
+    "NordicSki": {
+      "accent": "#72efdd",
+      "label": "Nordic Ski"
     },
     "Ride": {
       "accent": "#05ffa1",
@@ -9270,6 +9294,7 @@
   "types": [
     "GravelRide",
     "Hike",
+    "NordicSki",
     "Ride",
     "RockClimbing",
     "Run",
