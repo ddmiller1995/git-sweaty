@@ -6732,5 +6732,31 @@
     "start_date_local": "2026-03-31T17:19:11Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-04-02",
+    "distance": 9622.4,
+    "elevation_gain": 0.0,
+    "id": "17956352091",
+    "moving_time": 1200.0,
+    "name": "20 min HIIT Ride with Alex Toussaint",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-04-02T17:12:17Z",
+    "type": "Ride",
+    "year": 2026
+  },
+  {
+    "date": "2026-04-02",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "17956630472",
+    "moving_time": 1623.0,
+    "name": "Afternoon Weight Training",
+    "raw_activity_type": "WeightTraining",
+    "raw_type": "WeightTraining",
+    "start_date_local": "2026-04-02T17:39:06Z",
+    "type": "WeightTraining",
+    "year": 2026
   }
 ]
