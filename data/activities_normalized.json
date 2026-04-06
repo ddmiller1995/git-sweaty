@@ -6758,5 +6758,18 @@
     "start_date_local": "2026-04-02T17:39:06Z",
     "type": "WeightTraining",
     "year": 2026
+  },
+  {
+    "date": "2026-04-05",
+    "distance": 14503.3,
+    "elevation_gain": 1205.0,
+    "id": "17992878345",
+    "moving_time": 12493.0,
+    "name": "Easter church",
+    "raw_activity_type": "Hike",
+    "raw_type": "Hike",
+    "start_date_local": "2026-04-05T09:20:14Z",
+    "type": "Hike",
+    "year": 2026
   }
 ]
