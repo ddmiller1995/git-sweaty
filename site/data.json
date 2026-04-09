@@ -4688,6 +4688,15 @@
       "type": "Hike",
       "url": "https://www.strava.com/activities/17992878345",
       "year": 2026
+    },
+    {
+      "date": "2026-04-08",
+      "hour": 17,
+      "name": "30 min HIIT & Hills Ride with Alex Toussaint",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/18035333698",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -9003,6 +9012,15 @@
           "distance": 9622.4,
           "elevation_gain": 0.0,
           "moving_time": 1200.0
+        },
+        "2026-04-08": {
+          "activity_ids": [
+            "18035333698"
+          ],
+          "count": 1,
+          "distance": 14354.5,
+          "elevation_gain": 0.0,
+          "moving_time": 1800.0
         }
       },
       "RockClimbing": {
@@ -9339,7 +9357,7 @@
       }
     }
   },
-  "generated_at": "2026-04-08T16:12:27.197608+00:00",
+  "generated_at": "2026-04-09T16:15:56.921477+00:00",
   "other_bucket": "OtherSports",
   "profile_url": "https://www.strava.com/athletes/21683158",
   "repo": "ddmiller1995/git-sweaty",

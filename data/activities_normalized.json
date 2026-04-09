@@ -6771,5 +6771,18 @@
     "start_date_local": "2026-04-05T09:20:14Z",
     "type": "Hike",
     "year": 2026
+  },
+  {
+    "date": "2026-04-08",
+    "distance": 14354.5,
+    "elevation_gain": 0.0,
+    "id": "18035333698",
+    "moving_time": 1800.0,
+    "name": "30 min HIIT & Hills Ride with Alex Toussaint",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-04-08T17:58:06Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
