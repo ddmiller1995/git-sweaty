@@ -4697,6 +4697,15 @@
       "type": "Ride",
       "url": "https://www.strava.com/activities/18035333698",
       "year": 2026
+    },
+    {
+      "date": "2026-04-09",
+      "hour": 17,
+      "name": "Afternoon Rock Climb",
+      "subtype": "RockClimbing",
+      "type": "RockClimbing",
+      "url": "https://www.strava.com/activities/18048422360",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -9185,6 +9194,15 @@
           "distance": 3230.8,
           "elevation_gain": 116.0,
           "moving_time": 2678.0
+        },
+        "2026-04-09": {
+          "activity_ids": [
+            "18048422360"
+          ],
+          "count": 1,
+          "distance": 0.0,
+          "elevation_gain": 0.0,
+          "moving_time": 2133.0
         }
       },
       "Walk": {
@@ -9357,7 +9375,7 @@
       }
     }
   },
-  "generated_at": "2026-04-09T16:15:56.921477+00:00",
+  "generated_at": "2026-04-10T15:46:56.452072+00:00",
   "other_bucket": "OtherSports",
   "profile_url": "https://www.strava.com/athletes/21683158",
   "repo": "ddmiller1995/git-sweaty",
