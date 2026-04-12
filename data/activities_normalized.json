@@ -6797,5 +6797,18 @@
     "start_date_local": "2026-04-09T17:24:00Z",
     "type": "RockClimbing",
     "year": 2026
+  },
+  {
+    "date": "2026-04-11",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "18072714164",
+    "moving_time": 3301.0,
+    "name": "Afternoon Rock Climb",
+    "raw_activity_type": "RockClimbing",
+    "raw_type": "RockClimbing",
+    "start_date_local": "2026-04-11T16:08:26Z",
+    "type": "RockClimbing",
+    "year": 2026
   }
 ]
