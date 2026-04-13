@@ -6810,5 +6810,18 @@
     "start_date_local": "2026-04-11T16:08:26Z",
     "type": "RockClimbing",
     "year": 2026
+  },
+  {
+    "date": "2026-04-12",
+    "distance": 12138.4,
+    "elevation_gain": 923.0,
+    "id": "18083751505",
+    "moving_time": 8686.0,
+    "name": "Morning Hike",
+    "raw_activity_type": "Hike",
+    "raw_type": "Hike",
+    "start_date_local": "2026-04-12T08:39:23Z",
+    "type": "Hike",
+    "year": 2026
   }
 ]

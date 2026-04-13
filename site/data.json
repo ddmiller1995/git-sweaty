@@ -4715,6 +4715,15 @@
       "type": "RockClimbing",
       "url": "https://www.strava.com/activities/18072714164",
       "year": 2026
+    },
+    {
+      "date": "2026-04-12",
+      "hour": 8,
+      "name": "Morning Hike",
+      "subtype": "Hike",
+      "type": "Hike",
+      "url": "https://www.strava.com/activities/18083751505",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -8824,6 +8833,15 @@
           "distance": 14503.3,
           "elevation_gain": 1205.0,
           "moving_time": 12493.0
+        },
+        "2026-04-12": {
+          "activity_ids": [
+            "18083751505"
+          ],
+          "count": 1,
+          "distance": 12138.4,
+          "elevation_gain": 923.0,
+          "moving_time": 8686.0
         }
       },
       "NordicSki": {
@@ -9393,7 +9411,7 @@
       }
     }
   },
-  "generated_at": "2026-04-12T15:32:29.385197+00:00",
+  "generated_at": "2026-04-13T16:09:38.142925+00:00",
   "other_bucket": "OtherSports",
   "profile_url": "https://www.strava.com/athletes/21683158",
   "repo": "ddmiller1995/git-sweaty",
