@@ -6875,5 +6875,18 @@
     "start_date_local": "2026-04-16T16:14:34Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-04-18",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "18163727536",
+    "moving_time": 5706.0,
+    "name": "Lunch Rock Climb",
+    "raw_activity_type": "RockClimbing",
+    "raw_type": "RockClimbing",
+    "start_date_local": "2026-04-18T12:49:59Z",
+    "type": "RockClimbing",
+    "year": 2026
   }
 ]
