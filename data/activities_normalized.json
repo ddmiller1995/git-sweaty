@@ -6901,5 +6901,31 @@
     "start_date_local": "2026-04-19T14:37:32Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-04-21",
+    "distance": 9495.5,
+    "elevation_gain": 0.0,
+    "id": "18205823070",
+    "moving_time": 1199.0,
+    "name": "20 min Tabata Ride with Ally Love",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-04-21T17:22:18Z",
+    "type": "Ride",
+    "year": 2026
+  },
+  {
+    "date": "2026-04-21",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "18206084920",
+    "moving_time": 1262.0,
+    "name": "Afternoon Weight Training",
+    "raw_activity_type": "WeightTraining",
+    "raw_type": "WeightTraining",
+    "start_date_local": "2026-04-21T17:51:39Z",
+    "type": "WeightTraining",
+    "year": 2026
   }
 ]
