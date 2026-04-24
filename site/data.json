@@ -4796,6 +4796,33 @@
       "type": "WeightTraining",
       "url": "https://www.strava.com/activities/18206084920",
       "year": 2026
+    },
+    {
+      "date": "2026-04-22",
+      "hour": 17,
+      "name": "Afternoon Rock Climb",
+      "subtype": "RockClimbing",
+      "type": "RockClimbing",
+      "url": "https://www.strava.com/activities/18219925841",
+      "year": 2026
+    },
+    {
+      "date": "2026-04-23",
+      "hour": 7,
+      "name": "Morning Commute",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/18226883175",
+      "year": 2026
+    },
+    {
+      "date": "2026-04-23",
+      "hour": 16,
+      "name": "Afternoon Commute",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/18233271103",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -9157,6 +9184,16 @@
           "distance": 9495.5,
           "elevation_gain": 0.0,
           "moving_time": 1199.0
+        },
+        "2026-04-23": {
+          "activity_ids": [
+            "18226883175",
+            "18233271103"
+          ],
+          "count": 2,
+          "distance": 25612.8,
+          "elevation_gain": 242.0,
+          "moving_time": 4532.0
         }
       },
       "RockClimbing": {
@@ -9357,6 +9394,15 @@
           "distance": 0.0,
           "elevation_gain": 0.0,
           "moving_time": 5706.0
+        },
+        "2026-04-22": {
+          "activity_ids": [
+            "18219925841"
+          ],
+          "count": 1,
+          "distance": 0.0,
+          "elevation_gain": 0.0,
+          "moving_time": 3188.0
         }
       },
       "Walk": {
@@ -9547,7 +9593,7 @@
       }
     }
   },
-  "generated_at": "2026-04-22T16:06:57.755668+00:00",
+  "generated_at": "2026-04-24T16:02:07.463732+00:00",
   "other_bucket": "OtherSports",
   "profile_url": "https://www.strava.com/athletes/21683158",
   "repo": "ddmiller1995/git-sweaty",
