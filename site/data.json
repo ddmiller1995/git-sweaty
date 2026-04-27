@@ -4823,6 +4823,15 @@
       "type": "Ride",
       "url": "https://www.strava.com/activities/18233271103",
       "year": 2026
+    },
+    {
+      "date": "2026-04-26",
+      "hour": 9,
+      "name": "Both bridges",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/18271048945",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -9194,6 +9203,15 @@
           "distance": 25612.8,
           "elevation_gain": 242.0,
           "moving_time": 4532.0
+        },
+        "2026-04-26": {
+          "activity_ids": [
+            "18271048945"
+          ],
+          "count": 1,
+          "distance": 44691.4,
+          "elevation_gain": 554.0,
+          "moving_time": 7935.0
         }
       },
       "RockClimbing": {
@@ -9593,7 +9611,7 @@
       }
     }
   },
-  "generated_at": "2026-04-26T15:38:21.264799+00:00",
+  "generated_at": "2026-04-27T16:23:36.209503+00:00",
   "other_bucket": "OtherSports",
   "profile_url": "https://www.strava.com/athletes/21683158",
   "repo": "ddmiller1995/git-sweaty",
