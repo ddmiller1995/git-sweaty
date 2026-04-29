@@ -6979,5 +6979,31 @@
     "start_date_local": "2026-04-26T09:23:29Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-04-28",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "18299769254",
+    "moving_time": 3194.0,
+    "name": "Afternoon Weight Training",
+    "raw_activity_type": "WeightTraining",
+    "raw_type": "WeightTraining",
+    "start_date_local": "2026-04-28T16:21:39Z",
+    "type": "WeightTraining",
+    "year": 2026
+  },
+  {
+    "date": "2026-04-28",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "18300303101",
+    "moving_time": 1931.0,
+    "name": "Afternoon Rock Climb",
+    "raw_activity_type": "RockClimbing",
+    "raw_type": "RockClimbing",
+    "start_date_local": "2026-04-28T17:19:39Z",
+    "type": "RockClimbing",
+    "year": 2026
   }
 ]
