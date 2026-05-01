@@ -4854,10 +4854,19 @@
     {
       "date": "2026-04-30",
       "hour": 7,
-      "name": "Morning Ride",
+      "name": "Morning Commute",
       "subtype": "Ride",
       "type": "Ride",
       "url": "https://www.strava.com/activities/18320456031",
+      "year": 2026
+    },
+    {
+      "date": "2026-04-30",
+      "hour": 15,
+      "name": "Afternoon Commute",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/18326406921",
       "year": 2026
     }
   ],
@@ -9242,12 +9251,13 @@
         },
         "2026-04-30": {
           "activity_ids": [
-            "18320456031"
+            "18320456031",
+            "18326406921"
           ],
-          "count": 1,
-          "distance": 11296.1,
-          "elevation_gain": 63.0,
-          "moving_time": 1926.0
+          "count": 2,
+          "distance": 17896.0,
+          "elevation_gain": 161.0,
+          "moving_time": 3193.0
         }
       },
       "RockClimbing": {
@@ -9665,7 +9675,7 @@
       }
     }
   },
-  "generated_at": "2026-04-30T16:15:51.872240+00:00",
+  "generated_at": "2026-05-01T15:53:11.175933+00:00",
   "other_bucket": "OtherSports",
   "profile_url": "https://www.strava.com/athletes/21683158",
   "repo": "ddmiller1995/git-sweaty",
