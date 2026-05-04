@@ -7031,5 +7031,31 @@
     "start_date_local": "2026-04-30T15:49:55Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-05-03",
+    "distance": 5634.0,
+    "elevation_gain": 421.0,
+    "id": "18362296803",
+    "moving_time": 5140.0,
+    "name": "Granite DNF",
+    "raw_activity_type": "Hike",
+    "raw_type": "Hike",
+    "start_date_local": "2026-05-03T07:41:05Z",
+    "type": "Hike",
+    "year": 2026
+  },
+  {
+    "date": "2026-05-03",
+    "distance": 9226.8,
+    "elevation_gain": 34.1,
+    "id": "18365582970",
+    "moving_time": 1593.0,
+    "name": "To the water",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-05-03T14:32:54Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]

@@ -4868,6 +4868,24 @@
       "type": "Ride",
       "url": "https://www.strava.com/activities/18326406921",
       "year": 2026
+    },
+    {
+      "date": "2026-05-03",
+      "hour": 7,
+      "name": "Granite DNF",
+      "subtype": "Hike",
+      "type": "Hike",
+      "url": "https://www.strava.com/activities/18362296803",
+      "year": 2026
+    },
+    {
+      "date": "2026-05-03",
+      "hour": 14,
+      "name": "To the water",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/18365582970",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -8986,6 +9004,15 @@
           "distance": 12138.4,
           "elevation_gain": 923.0,
           "moving_time": 8686.0
+        },
+        "2026-05-03": {
+          "activity_ids": [
+            "18362296803"
+          ],
+          "count": 1,
+          "distance": 5634.0,
+          "elevation_gain": 421.0,
+          "moving_time": 5140.0
         }
       },
       "NordicSki": {
@@ -9258,6 +9285,15 @@
           "distance": 17896.0,
           "elevation_gain": 161.0,
           "moving_time": 3193.0
+        },
+        "2026-05-03": {
+          "activity_ids": [
+            "18365582970"
+          ],
+          "count": 1,
+          "distance": 9226.8,
+          "elevation_gain": 34.1,
+          "moving_time": 1593.0
         }
       },
       "RockClimbing": {
@@ -9675,7 +9711,7 @@
       }
     }
   },
-  "generated_at": "2026-05-03T15:42:11.437990+00:00",
+  "generated_at": "2026-05-04T16:28:32.564097+00:00",
   "other_bucket": "OtherSports",
   "profile_url": "https://www.strava.com/athletes/21683158",
   "repo": "ddmiller1995/git-sweaty",
