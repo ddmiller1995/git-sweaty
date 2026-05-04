@@ -44,6 +44,8 @@ const yearClearButton = document.getElementById("yearClearButton");
 const resetAllButton = document.getElementById("resetAllButton");
 const imperialUnitsButton = document.getElementById("imperialUnitsButton");
 const metricUnitsButton = document.getElementById("metricUnitsButton");
+const heatmapViewButton = document.getElementById("heatmapViewButton");
+const graphViewButton = document.getElementById("graphViewButton");
 const typeMenuOptions = document.getElementById("typeMenuOptions");
 const yearMenuOptions = document.getElementById("yearMenuOptions");
 const heatmaps = document.getElementById("heatmaps");
@@ -3541,6 +3543,216 @@ function attachSingleSelectCardToggle(button, options = {}) {
   }
 }
 
+function getGraphMetricKey(activeMetricKey) {
+  if (activeMetricKey === "distance") return "distance";
+  if (activeMetricKey === "moving_time") return "moving_time";
+  if (activeMetricKey === "elevation_gain") return "elevation_gain";
+  return "count";
+}
+
+function buildCumulativeGraphData(aggregates, year, metricKey) {
+  const isCurrentYear = year === new Date().getFullYear();
+  const todayKey = getLocalTodayDateKey();
+  const isLeap = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+  const totalDays = isLeap ? 366 : 365;
+
+  const dailyEntries = [];
+  let cumulative = 0;
+  let elapsedDays = 0;
+
+  for (let d = 0; d < totalDays; d++) {
+    const date = new Date(year, 0, d + 1);
+    const mm = String(date.getMonth() + 1).padStart(2, "0");
+    const dd = String(date.getDate()).padStart(2, "0");
+    const dateKey = `${year}-${mm}-${dd}`;
+    const entry = aggregates[dateKey];
+    cumulative += entry ? (entry[metricKey] || 0) : 0;
+    const elapsed = isDateKeyElapsed(dateKey, todayKey);
+    if (elapsed) elapsedDays = d + 1;
+    dailyEntries.push({ dayIndex: d, cumulative, elapsed });
+  }
+
+  const actualTotal = elapsedDays > 0 ? dailyEntries[elapsedDays - 1].cumulative : 0;
+  const pace = elapsedDays > 0 ? actualTotal / elapsedDays : 0;
+
+  return {
+    dailyEntries,
+    totalDays,
+    elapsedDays,
+    actualTotal,
+    projectedTotal: pace * totalDays,
+    isCurrentYear,
+  };
+}
+
+function formatGraphMetricValue(metricKey, value, units) {
+  if (metricKey === "count") return Math.round(value).toLocaleString();
+  if (metricKey === "distance") return formatDistance(value, units);
+  if (metricKey === "moving_time") return formatDuration(value);
+  if (metricKey === "elevation_gain") return formatElevation(value, units);
+  return String(Math.round(value));
+}
+
+function formatGraphAxisLabel(metricKey, value, units) {
+  if (metricKey === "count") return Math.round(value).toLocaleString();
+  if (metricKey === "distance") {
+    if (units.distance === "km") return `${Math.round(value / 1000)} km`;
+    return `${Math.round(value / 1609.344)} mi`;
+  }
+  if (metricKey === "moving_time") return `${Math.round(value / 3600)}h`;
+  if (metricKey === "elevation_gain") {
+    if (units.elevation === "m") return `${Math.round(value)} m`;
+    return `${Math.round(value * 3.28084)} ft`;
+  }
+  return String(Math.round(value));
+}
+
+function buildYearGraphArea(aggregates, year, units, graphMetricKey, goals) {
+  const PAD = { top: 14, right: 20, bottom: 28, left: 52 };
+  const W = 780;
+  const H = 160;
+  const CW = W - PAD.left - PAD.right; // 708
+  const CH = H - PAD.top - PAD.bottom; // 118
+
+  const data = buildCumulativeGraphData(aggregates, year, graphMetricKey);
+  const { dailyEntries, totalDays, elapsedDays, actualTotal, projectedTotal, isCurrentYear } = data;
+
+  const goalValue = (goals && goals[graphMetricKey]) ? goals[graphMetricKey] : null;
+  let yMax = Math.max(goalValue || 0, projectedTotal, actualTotal) * 1.15;
+  if (yMax === 0) yMax = 1;
+
+  const xOf = (dayIndex) => PAD.left + (dayIndex / (totalDays - 1)) * CW;
+  const yOf = (value) => PAD.top + CH - (value / yMax) * CH;
+
+  const svgNS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(svgNS, "svg");
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.setAttribute("aria-hidden", "true");
+  svg.classList.add("year-graph-svg");
+
+  const el = (tag, attrs = {}) => {
+    const node = document.createElementNS(svgNS, tag);
+    Object.entries(attrs).forEach(([k, v]) => node.setAttribute(k, v));
+    return node;
+  };
+
+  // Month gridlines + labels
+  const MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  for (let m = 0; m < 12; m++) {
+    const firstDay = new Date(year, m, 1);
+    const dayOfYear = Math.floor((firstDay - new Date(year, 0, 1)) / 86400000);
+    const xm = xOf(dayOfYear);
+    svg.appendChild(el("line", {
+      class: "grid-line",
+      x1: xm, y1: PAD.top, x2: xm, y2: PAD.top + CH,
+    }));
+    svg.appendChild(Object.assign(el("text", {
+      class: "axis-label",
+      x: xm + 3,
+      y: PAD.top + CH + 14,
+      "text-anchor": "start",
+    }), { textContent: MONTH_NAMES[m] }));
+  }
+
+  // Y-axis ticks (rounded labels)
+  const yTicks = [0, 0.25, 0.5, 0.75, 1.0];
+  yTicks.forEach((frac) => {
+    const val = frac * yMax;
+    const yt = yOf(val);
+    svg.appendChild(el("line", {
+      class: "grid-line",
+      x1: PAD.left, y1: yt, x2: PAD.left + CW, y2: yt,
+    }));
+    if (frac > 0) {
+      svg.appendChild(Object.assign(el("text", {
+        class: "axis-label",
+        x: PAD.left - 4,
+        y: yt + 4,
+        "text-anchor": "end",
+      }), { textContent: formatGraphAxisLabel(graphMetricKey, val, units) }));
+    }
+  });
+
+  // Goal-pace line
+  if (goalValue) {
+    svg.appendChild(el("path", {
+      class: "goal-line",
+      d: `M ${xOf(0)} ${yOf(0)} L ${xOf(totalDays - 1)} ${yOf(goalValue)}`,
+    }));
+    const goalLabel = Object.assign(el("text", {
+      class: "goal-label",
+      x: xOf(totalDays - 1) - 2,
+      y: yOf(goalValue) - 5,
+      "text-anchor": "end",
+    }), { textContent: `Goal: ${formatGraphAxisLabel(graphMetricKey, goalValue, units)}` });
+    svg.appendChild(goalLabel);
+  }
+
+  // Actual area + line (elapsed days or full year for past years)
+  const lineEnd = isCurrentYear ? elapsedDays : totalDays;
+  if (lineEnd > 0) {
+    const pts = dailyEntries.slice(0, lineEnd);
+    const lineD = pts.map((p, i) => `${i === 0 ? "M" : "L"} ${xOf(p.dayIndex)} ${yOf(p.cumulative)}`).join(" ");
+    const areaD = lineD
+      + ` L ${xOf(pts[pts.length - 1].dayIndex)} ${yOf(0)}`
+      + ` L ${xOf(pts[0].dayIndex)} ${yOf(0)} Z`;
+
+    svg.appendChild(el("path", { class: "actual-area", d: areaD }));
+    svg.appendChild(el("path", { class: "actual-line", d: lineD }));
+  }
+
+  // Projection line (current year only)
+  if (isCurrentYear && elapsedDays > 0 && projectedTotal > 0) {
+    const todayX = xOf(elapsedDays - 1);
+    const todayY = yOf(actualTotal);
+    const endY = yOf(Math.min(projectedTotal, yMax));
+    svg.appendChild(el("path", {
+      class: "projection-line",
+      d: `M ${todayX} ${todayY} L ${xOf(totalDays - 1)} ${endY}`,
+    }));
+  }
+
+  const container = document.createElement("div");
+  container.className = "year-graph-container";
+  container.appendChild(svg);
+
+  // Today dot + tooltip (current year only)
+  if (isCurrentYear && elapsedDays > 0) {
+    const dot = el("circle", {
+      class: "today-dot",
+      cx: xOf(elapsedDays - 1),
+      cy: yOf(actualTotal),
+      r: 5,
+      style: "",
+    });
+    svg.appendChild(dot);
+
+    // Tooltip content
+    const weeksElapsed = elapsedDays / 7;
+    const weeksRemaining = (totalDays - elapsedDays) / 7;
+    const weeklyAvg = weeksElapsed > 0 ? actualTotal / weeksElapsed : 0;
+    const goalAtToday = goalValue != null ? goalValue * (elapsedDays / totalDays) : null;
+    const requiredWeekly = (goalValue != null && weeksRemaining > 0)
+      ? Math.max(0, (goalValue - actualTotal) / weeksRemaining)
+      : null;
+
+    const fmt = (v) => formatGraphAxisLabel(graphMetricKey, v, units);
+    const tipLines = [
+      `Current: ${fmt(actualTotal)}`,
+      ...(goalAtToday != null ? [`Goal pace: ${fmt(goalAtToday)}`] : []),
+      `Weekly avg: ${fmt(weeklyAvg)}/wk`,
+      ...(requiredWeekly != null ? [`Needed/wk: ${fmt(requiredWeekly)}/wk`] : []),
+    ];
+
+    dot.style.cursor = "pointer";
+    dot.addEventListener("mouseenter", (e) => showTooltip(tipLines, e.clientX, e.clientY));
+    dot.addEventListener("mousemove", (e) => showTooltip(tipLines, e.clientX, e.clientY));
+    dot.addEventListener("mouseleave", () => hideTooltip());
+  }
+
+  return container;
+}
+
 function buildCard(type, year, aggregates, units, options = {}) {
   const card = document.createElement("div");
   card.className = "card year-card";
@@ -3568,10 +3780,13 @@ function buildCard(type, year, aggregates, units, options = {}) {
   const onYearMetricStateChange = typeof options.onYearMetricStateChange === "function"
     ? options.onYearMetricStateChange
     : null;
+  const viewMode = options.viewMode || "heatmap";
+  const goals = options.goals || {};
   let activeMetricKey = typeof options.initialMetricKey === "string"
     ? options.initialMetricKey
     : null;
   let heatmapArea = null;
+  let graphContainer = null;
 
   const totals = {
     count: 0,
@@ -3606,9 +3821,20 @@ function buildCard(type, year, aggregates, units, options = {}) {
     if (heatmapArea && heatmapArea.parentNode === body) {
       body.replaceChild(nextHeatmapArea, heatmapArea);
     } else {
-      body.appendChild(nextHeatmapArea);
+      body.insertBefore(nextHeatmapArea, body.firstChild);
     }
     heatmapArea = nextHeatmapArea;
+  };
+
+  const renderGraph = () => {
+    const graphMetricKey = getGraphMetricKey(activeMetricKey);
+    const nextGraphContainer = buildYearGraphArea(aggregates, year, units, graphMetricKey, goals);
+    if (graphContainer && graphContainer.parentNode === body) {
+      body.replaceChild(nextGraphContainer, graphContainer);
+    } else {
+      body.insertBefore(nextGraphContainer, body.firstChild);
+    }
+    graphContainer = nextGraphContainer;
   };
 
   const metricItems = buildYearMetricStatItems(totals, units);
@@ -3660,7 +3886,11 @@ function buildCard(type, year, aggregates, units, options = {}) {
           },
           onToggleComplete: () => {
             renderMetricButtonState();
-            renderHeatmap();
+            if (viewMode === "graph") {
+              renderGraph();
+            } else {
+              renderHeatmap();
+            }
             reportYearMetricState("card");
             schedulePostInteractionAlignment();
           },
@@ -3669,7 +3899,11 @@ function buildCard(type, year, aggregates, units, options = {}) {
     })),
   ];
   const stats = buildSideStatColumn(statItems, { className: "card-stats side-stats-column" });
-  renderHeatmap();
+  if (viewMode === "graph") {
+    renderGraph();
+  } else {
+    renderHeatmap();
+  }
   renderMetricButtonState();
   reportYearMetricState("init");
 
@@ -4555,6 +4789,7 @@ async function init() {
   let selectedYears = new Set();
   let currentUnitSystem = getUnitSystemFromUnits(setupUnits);
   let currentUnits = getUnitsForSystem(currentUnitSystem);
+  let currentViewMode = "heatmap";
   let currentVisibleYears = payload.years.slice().sort((a, b) => b - a);
   let hoverClearedSummaryType = null;
   let hoverClearedSummaryYearMetricKey = null;
@@ -4613,6 +4848,29 @@ async function init() {
     currentUnitSystem = normalizedSystem;
     currentUnits = getUnitsForSystem(currentUnitSystem);
     syncUnitToggleState();
+    update();
+  }
+
+  function syncViewModeToggleState() {
+    const isGraph = currentViewMode === "graph";
+    if (heatmapViewButton) {
+      heatmapViewButton.classList.toggle("active", !isGraph);
+      heatmapViewButton.setAttribute("aria-pressed", isGraph ? "false" : "true");
+    }
+    if (graphViewButton) {
+      graphViewButton.classList.toggle("active", isGraph);
+      graphViewButton.setAttribute("aria-pressed", isGraph ? "true" : "false");
+    }
+  }
+
+  function setViewMode(mode) {
+    const normalized = mode === "graph" ? "graph" : "heatmap";
+    if (normalized === currentViewMode) {
+      syncViewModeToggleState();
+      return;
+    }
+    currentViewMode = normalized;
+    syncViewModeToggleState();
     update();
   }
 
@@ -5014,6 +5272,8 @@ async function init() {
               typeLabelsByDate,
               activityLinksByDateType,
               typeMetricsByDateType,
+              viewMode: currentViewMode,
+              goals: payload.goals || {},
             },
           );
           setCardScrollKey(card, `${combinedSelectionKey}:year:${year}`);
@@ -5059,6 +5319,8 @@ async function init() {
               initialMetricKey: getInitialYearMetricKey(year),
               onYearMetricStateChange,
               activityLinksByDateType,
+              viewMode: currentViewMode,
+              goals: payload.goals || {},
             });
             setCardScrollKey(card, `${typeCardKey}:year:${year}`);
             trackYearMetricAvailability(year, nextVisibleYearMetricYears);
@@ -5235,6 +5497,12 @@ async function init() {
       setUnitSystem("metric");
     });
   }
+  if (heatmapViewButton) {
+    heatmapViewButton.addEventListener("click", () => setViewMode("heatmap"));
+  }
+  if (graphViewButton) {
+    graphViewButton.addEventListener("click", () => setViewMode("graph"));
+  }
   if (resetAllButton) {
     resetAllButton.addEventListener("click", () => {
       if (isDefaultFilterState()) {
@@ -5292,6 +5560,7 @@ async function init() {
     }
   });
   syncUnitToggleState();
+  syncViewModeToggleState();
   update();
 
   if (!useTouchInteractions && typeof window.ResizeObserver === "function" && !tooltipResizeObserver) {

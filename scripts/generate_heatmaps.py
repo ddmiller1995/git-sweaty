@@ -406,6 +406,24 @@ def _write_site_data(payload: Dict) -> None:
     write_json(SITE_DATA_PATH, payload)
 
 
+def _build_goals(goals_cfg: Dict, units: Dict) -> Dict:
+    """Convert user-facing goal config to SI units (meters, seconds, count)."""
+    if not goals_cfg:
+        return {}
+    out = {}
+    if "activities" in goals_cfg:
+        out["count"] = int(goals_cfg["activities"])
+    if "distance" in goals_cfg:
+        val = float(goals_cfg["distance"])
+        out["distance"] = val * (1000.0 if units.get("distance") == "km" else 1609.344)
+    if "moving_time" in goals_cfg:
+        out["moving_time"] = float(goals_cfg["moving_time"]) * 3600.0
+    if "elevation" in goals_cfg:
+        val = float(goals_cfg["elevation"])
+        out["elevation_gain"] = val if units.get("elevation") == "m" else val / 3.28084
+    return out
+
+
 def generate(write_svgs: bool = True):
     config = load_config()
     activities_cfg = config.get("activities", {}) or {}
@@ -419,6 +437,7 @@ def generate(write_svgs: bool = True):
         "distance": units.get("distance", "mi"),
         "elevation": units.get("elevation", "ft"),
     }
+    goals = _build_goals(config.get("goals", {}), units)
 
     aggregates = read_json(AGG_PATH) if os.path.exists(AGG_PATH) else {"years": {}}
     aggregate_years = aggregates.get("years", {}) or {}
@@ -478,6 +497,8 @@ def generate(write_svgs: bool = True):
             site_payload["strava_profile_url"] = profile_url
         elif source == "garmin":
             site_payload["garmin_profile_url"] = profile_url
+    if goals:
+        site_payload["goals"] = goals
     repo_slug = _repo_slug_from_git()
     if repo_slug:
         site_payload["repo"] = repo_slug
