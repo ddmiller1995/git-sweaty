@@ -31,7 +31,7 @@ import webbrowser
 from email.utils import parsedate_to_datetime
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
-from typing import Iterator, Optional, Tuple
+from typing import Dict, Iterator, Optional, Tuple
 
 from garmin_token_store import (
     decode_token_store_b64,
@@ -722,6 +722,24 @@ def _existing_dashboard_strava_activity_links(repo: str) -> Optional[bool]:
 
 def _existing_dashboard_garmin_activity_links(repo: str) -> Optional[bool]:
     return _existing_dashboard_activity_links(repo, "garmin")
+
+
+def _existing_dashboard_goals(repo: str) -> Optional[Dict[str, float]]:
+    keys = {
+        "activities": "DASHBOARD_GOAL_ACTIVITIES",
+        "distance": "DASHBOARD_GOAL_DISTANCE",
+        "moving_time": "DASHBOARD_GOAL_MOVING_TIME",
+        "elevation": "DASHBOARD_GOAL_ELEVATION",
+    }
+    result: Dict[str, float] = {}
+    for field, var in keys.items():
+        raw = _get_variable(var, repo)
+        if raw is not None:
+            try:
+                result[field] = float(raw)
+            except ValueError:
+                pass
+    return result if result else None
 
 
 def _list_secret_names(repo: str) -> set[str]:
@@ -2011,6 +2029,63 @@ def _resolve_units(args: argparse.Namespace, interactive: bool) -> Tuple[str, st
     )
 
 
+def _prompt_goal_value(label: str, unit_label: str, default: Optional[float]) -> Optional[float]:
+    default_str = str(int(default)) if default is not None else None
+    default_hint = f" (default: {default_str})" if default_str else ""
+    prompt = f"  {label} per year [{unit_label}]{default_hint}: "
+    while True:
+        raw = input(prompt).strip()
+        if raw == "" and default is not None:
+            return default
+        if raw == "":
+            return None
+        try:
+            val = float(raw)
+            if val > 0:
+                return val
+        except ValueError:
+            pass
+        print(f"  Please enter a positive number or press Enter to skip.")
+
+
+def _prompt_goals(distance_unit: str, elevation_unit: str, existing: Optional[Dict[str, float]]) -> Dict[str, float]:
+    ex = existing or {}
+    print("\nOptional: set yearly goals to show a progress graph on your dashboard.")
+    print("Press Enter to keep any existing value, or type a number (leave blank to clear).")
+    goals: Dict[str, float] = {}
+
+    v = _prompt_goal_value("Activities", "count", ex.get("activities"))
+    if v is not None:
+        goals["activities"] = v
+
+    v = _prompt_goal_value("Distance", distance_unit, ex.get("distance"))
+    if v is not None:
+        goals["distance"] = v
+
+    v = _prompt_goal_value("Moving time", "hours", ex.get("moving_time"))
+    if v is not None:
+        goals["moving_time"] = v
+
+    v = _prompt_goal_value("Elevation gain", elevation_unit, ex.get("elevation"))
+    if v is not None:
+        goals["elevation"] = v
+
+    return goals
+
+
+def _resolve_goals(
+    args: argparse.Namespace,
+    interactive: bool,
+    repo: str,
+    distance_unit: str,
+    elevation_unit: str,
+) -> Dict[str, float]:
+    existing = _existing_dashboard_goals(repo)
+    if interactive:
+        return _prompt_goals(distance_unit, elevation_unit, existing)
+    return existing or {}
+
+
 def _add_step(
     steps: list[StepResult],
     name: str,
@@ -2872,6 +2947,8 @@ def main() -> int:
         distance_unit, elevation_unit = _resolve_units(args, interactive)
         week_start = _resolve_week_start(args, interactive, repo)
 
+    goals = _resolve_goals(args, interactive, repo, distance_unit, elevation_unit)
+
     full_backfill = False
     if interactive and previous_source == source:
         full_backfill = _prompt_full_backfill_choice(source)
@@ -3079,6 +3156,14 @@ def main() -> int:
         variable_pairs.append(
             ("DASHBOARD_GARMIN_ACTIVITY_LINKS", "true" if garmin_activity_links_enabled else "")
         )
+    goal_variable_map = {
+        "activities": "DASHBOARD_GOAL_ACTIVITIES",
+        "distance": "DASHBOARD_GOAL_DISTANCE",
+        "moving_time": "DASHBOARD_GOAL_MOVING_TIME",
+        "elevation": "DASHBOARD_GOAL_ELEVATION",
+    }
+    for field, var in goal_variable_map.items():
+        variable_pairs.append((var, str(int(goals[field])) if field in goals else ""))
     for name, value in variable_pairs:
         try:
             if name in {
@@ -3086,6 +3171,10 @@ def main() -> int:
                 "DASHBOARD_STRAVA_ACTIVITY_LINKS",
                 "DASHBOARD_GARMIN_PROFILE_URL",
                 "DASHBOARD_GARMIN_ACTIVITY_LINKS",
+                "DASHBOARD_GOAL_ACTIVITIES",
+                "DASHBOARD_GOAL_DISTANCE",
+                "DASHBOARD_GOAL_MOVING_TIME",
+                "DASHBOARD_GOAL_ELEVATION",
             } and not value:
                 _clear_variable(name, repo)
             else:
@@ -3106,6 +3195,9 @@ def main() -> int:
         variable_summary = f"{variable_summary}, DASHBOARD_GARMIN_PROFILE_URL={garmin_profile_url}"
     if source == "garmin" and garmin_activity_links_enabled:
         variable_summary = f"{variable_summary}, DASHBOARD_GARMIN_ACTIVITY_LINKS=true"
+    for field, var in goal_variable_map.items():
+        if field in goals:
+            variable_summary = f"{variable_summary}, {var}={int(goals[field])}"
 
     if variable_errors:
         _add_step(

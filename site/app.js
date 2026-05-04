@@ -3723,7 +3723,7 @@ function buildYearGraphArea(aggregates, year, units, graphMetricKey, goals) {
       cx: xOf(elapsedDays - 1),
       cy: yOf(actualTotal),
       r: 5,
-      style: "cursor:default;",
+      style: "",
     });
     svg.appendChild(dot);
 
@@ -3737,41 +3737,17 @@ function buildYearGraphArea(aggregates, year, units, graphMetricKey, goals) {
       : null;
 
     const fmt = (v) => formatGraphAxisLabel(graphMetricKey, v, units);
-    const tipRows = [
-      ["Current", fmt(actualTotal)],
-      ...(goalAtToday != null ? [["Goal pace", fmt(goalAtToday)]] : []),
-      ["Weekly avg", `${fmt(weeklyAvg)}/wk`],
-      ...(requiredWeekly != null ? [["Needed/wk", `${fmt(requiredWeekly)}/wk`]] : []),
+    const tipLines = [
+      `Current: ${fmt(actualTotal)}`,
+      ...(goalAtToday != null ? [`Goal pace: ${fmt(goalAtToday)}`] : []),
+      `Weekly avg: ${fmt(weeklyAvg)}/wk`,
+      ...(requiredWeekly != null ? [`Needed/wk: ${fmt(requiredWeekly)}/wk`] : []),
     ];
 
-    // const tipEl = document.createElement("div");
-    // tipEl.className = "graph-dot-tooltip";
-    // tipRows.forEach(([label, value]) => {
-    //   const row = document.createElement("div");
-    //   row.className = "graph-tooltip-row";
-    //   const lEl = document.createElement("span");
-    //   lEl.className = "graph-tooltip-label";
-    //   lEl.textContent = label;
-    //   const vEl = document.createElement("span");
-    //   vEl.className = "graph-tooltip-value";
-    //   vEl.textContent = value;
-    //   row.appendChild(lEl);
-    //   row.appendChild(vEl);
-    //   tipEl.appendChild(row);
-    // });
-    // container.appendChild(tipEl);
-
-    // const showTip = (e) => {
-    //   const rect = container.getBoundingClientRect();
-    //   const rawLeft = e.clientX - rect.left + 14;
-    //   const maxLeft = rect.width - tipEl.offsetWidth - 8;
-    //   tipEl.style.left = `${Math.min(rawLeft, maxLeft)}px`;
-    //   tipEl.style.top = `${e.clientY - rect.top - tipEl.offsetHeight / 2}px`;
-    //   tipEl.style.display = "block";
-    // };
-    // dot.addEventListener("mouseenter", showTip);
-    // dot.addEventListener("mousemove", showTip);
-    // dot.addEventListener("mouseleave", () => { tipEl.style.display = "none"; });
+    dot.style.cursor = "pointer";
+    dot.addEventListener("mouseenter", (e) => showTooltip(tipLines, e.clientX, e.clientY));
+    dot.addEventListener("mousemove", (e) => showTooltip(tipLines, e.clientX, e.clientY));
+    dot.addEventListener("mouseleave", () => hideTooltip());
   }
 
   return container;
