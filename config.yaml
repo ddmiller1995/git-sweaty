@@ -98,3 +98,9 @@ units:
 
 heatmaps:
   week_start: "sunday" # "sunday" or "monday"
+
+goals:
+  activities: 200      # count per year
+  distance: 1000       # in your configured distance unit (mi or km)
+  moving_time: 200     # hours per year
+  elevation: 100000    # in your configured elevation unit (ft or m)
