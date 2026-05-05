@@ -9711,7 +9711,13 @@
       }
     }
   },
-  "generated_at": "2026-05-04T16:28:32.564097+00:00",
+  "generated_at": "2026-05-05T00:00:31.556637+00:00",
+  "goals": {
+    "count": 200,
+    "distance": 1609344.0,
+    "elevation_gain": 30479.99902464003,
+    "moving_time": 720000.0
+  },
   "other_bucket": "OtherSports",
   "profile_url": "https://www.strava.com/athletes/21683158",
   "repo": "ddmiller1995/git-sweaty",
