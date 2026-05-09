@@ -7057,5 +7057,18 @@
     "start_date_local": "2026-05-03T14:32:54Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-05-08",
+    "distance": 13423.0,
+    "elevation_gain": 84.0,
+    "id": "18432349765",
+    "moving_time": 2578.0,
+    "name": "Leisurely laps",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-05-08T17:56:39Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]

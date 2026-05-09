@@ -4886,6 +4886,15 @@
       "type": "Ride",
       "url": "https://www.strava.com/activities/18365582970",
       "year": 2026
+    },
+    {
+      "date": "2026-05-08",
+      "hour": 17,
+      "name": "Leisurely laps",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/18432349765",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -9294,6 +9303,15 @@
           "distance": 9226.8,
           "elevation_gain": 34.1,
           "moving_time": 1593.0
+        },
+        "2026-05-08": {
+          "activity_ids": [
+            "18432349765"
+          ],
+          "count": 1,
+          "distance": 13423.0,
+          "elevation_gain": 84.0,
+          "moving_time": 2578.0
         }
       },
       "RockClimbing": {
@@ -9711,7 +9729,7 @@
       }
     }
   },
-  "generated_at": "2026-05-08T16:11:19.495765+00:00",
+  "generated_at": "2026-05-09T15:45:27.312447+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
