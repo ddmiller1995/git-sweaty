@@ -4935,10 +4935,19 @@
     {
       "date": "2026-05-13",
       "hour": 7,
-      "name": "Morning Ride",
+      "name": "Bike to work day!",
       "subtype": "Ride",
       "type": "Ride",
       "url": "https://www.strava.com/activities/18492679195",
+      "year": 2026
+    },
+    {
+      "date": "2026-05-13",
+      "hour": 18,
+      "name": "Evening Commute",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/18498450778",
       "year": 2026
     }
   ],
@@ -9378,12 +9387,13 @@
         },
         "2026-05-13": {
           "activity_ids": [
-            "18492679195"
+            "18492679195",
+            "18498450778"
           ],
-          "count": 1,
-          "distance": 16462.0,
-          "elevation_gain": 126.0,
-          "moving_time": 3740.0
+          "count": 2,
+          "distance": 27560.0,
+          "elevation_gain": 270.0,
+          "moving_time": 5770.0
         }
       },
       "RockClimbing": {
@@ -9819,7 +9829,7 @@
       }
     }
   },
-  "generated_at": "2026-05-13T17:13:26.229132+00:00",
+  "generated_at": "2026-05-14T16:57:58.056341+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
