@@ -4994,6 +4994,24 @@
       "type": "Ride",
       "url": "https://www.strava.com/activities/18549423500",
       "year": 2026
+    },
+    {
+      "date": "2026-05-18",
+      "hour": 16,
+      "name": "Afternoon legs",
+      "subtype": "WeightTraining",
+      "type": "WeightTraining",
+      "url": "https://www.strava.com/activities/18562044967",
+      "year": 2026
+    },
+    {
+      "date": "2026-05-19",
+      "hour": 7,
+      "name": "Morning Ride",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/18569347407",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -9458,6 +9476,15 @@
           "distance": 14853.4,
           "elevation_gain": 180.0,
           "moving_time": 2481.0
+        },
+        "2026-05-19": {
+          "activity_ids": [
+            "18569347407"
+          ],
+          "count": 1,
+          "distance": 11196.8,
+          "elevation_gain": 67.0,
+          "moving_time": 2116.0
         }
       },
       "RockClimbing": {
@@ -9878,6 +9905,15 @@
           "distance": 0.0,
           "elevation_gain": 0.0,
           "moving_time": 3600.0
+        },
+        "2026-05-18": {
+          "activity_ids": [
+            "18562044967"
+          ],
+          "count": 1,
+          "distance": 0.0,
+          "elevation_gain": 0.0,
+          "moving_time": 3705.0
         }
       },
       "Workout": {
@@ -9911,7 +9947,7 @@
       }
     }
   },
-  "generated_at": "2026-05-18T17:28:36.418599+00:00",
+  "generated_at": "2026-05-19T17:36:13.723796+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
