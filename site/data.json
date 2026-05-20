@@ -5007,10 +5007,19 @@
     {
       "date": "2026-05-19",
       "hour": 7,
-      "name": "Morning Ride",
+      "name": "Morning Commute",
       "subtype": "Ride",
       "type": "Ride",
       "url": "https://www.strava.com/activities/18569347407",
+      "year": 2026
+    },
+    {
+      "date": "2026-05-19",
+      "hour": 15,
+      "name": "Why do we allow Fremont bridge to open at 4pm",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/18575101587",
       "year": 2026
     }
   ],
@@ -9479,12 +9488,13 @@
         },
         "2026-05-19": {
           "activity_ids": [
-            "18569347407"
+            "18569347407",
+            "18575101587"
           ],
-          "count": 1,
-          "distance": 11196.8,
-          "elevation_gain": 67.0,
-          "moving_time": 2116.0
+          "count": 2,
+          "distance": 22347.1,
+          "elevation_gain": 211.0,
+          "moving_time": 4107.0
         }
       },
       "RockClimbing": {
@@ -9947,7 +9957,7 @@
       }
     }
   },
-  "generated_at": "2026-05-19T17:36:13.723796+00:00",
+  "generated_at": "2026-05-20T17:52:08.235441+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
