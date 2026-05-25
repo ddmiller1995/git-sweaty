@@ -5030,6 +5030,24 @@
       "type": "RockClimbing",
       "url": "https://www.strava.com/activities/18603020894",
       "year": 2026
+    },
+    {
+      "date": "2026-05-23",
+      "hour": 11,
+      "name": "Iron Peak -> Ingalls Lake",
+      "subtype": "Hike",
+      "type": "Hike",
+      "url": "https://www.strava.com/activities/18639710709",
+      "year": 2026
+    },
+    {
+      "date": "2026-05-24",
+      "hour": 8,
+      "name": "Ingalls Lake & Pass -> Home",
+      "subtype": "Hike",
+      "type": "Hike",
+      "url": "https://www.strava.com/activities/18641374260",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -9166,6 +9184,24 @@
           "distance": 4059.0,
           "elevation_gain": 125.0,
           "moving_time": 3925.0
+        },
+        "2026-05-23": {
+          "activity_ids": [
+            "18639710709"
+          ],
+          "count": 1,
+          "distance": 17890.9,
+          "elevation_gain": 1467.0,
+          "moving_time": 19251.0
+        },
+        "2026-05-24": {
+          "activity_ids": [
+            "18641374260"
+          ],
+          "count": 1,
+          "distance": 9181.2,
+          "elevation_gain": 132.0,
+          "moving_time": 8325.0
         }
       },
       "NordicSki": {
@@ -9975,7 +10011,7 @@
       }
     }
   },
-  "generated_at": "2026-05-24T15:58:10.976619+00:00",
+  "generated_at": "2026-05-25T17:04:58.072224+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,

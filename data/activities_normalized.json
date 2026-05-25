@@ -7265,5 +7265,31 @@
     "start_date_local": "2026-05-21T17:42:26Z",
     "type": "RockClimbing",
     "year": 2026
+  },
+  {
+    "date": "2026-05-23",
+    "distance": 17890.9,
+    "elevation_gain": 1467.0,
+    "id": "18639710709",
+    "moving_time": 19251.0,
+    "name": "Iron Peak -> Ingalls Lake",
+    "raw_activity_type": "Hike",
+    "raw_type": "Hike",
+    "start_date_local": "2026-05-23T11:46:03Z",
+    "type": "Hike",
+    "year": 2026
+  },
+  {
+    "date": "2026-05-24",
+    "distance": 9181.2,
+    "elevation_gain": 132.0,
+    "id": "18641374260",
+    "moving_time": 8325.0,
+    "name": "Ingalls Lake & Pass -> Home",
+    "raw_activity_type": "Hike",
+    "raw_type": "Hike",
+    "start_date_local": "2026-05-24T08:22:43Z",
+    "type": "Hike",
+    "year": 2026
   }
 ]
