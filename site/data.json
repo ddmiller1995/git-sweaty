@@ -5066,6 +5066,15 @@
       "type": "RockClimbing",
       "url": "https://www.strava.com/activities/18668218320",
       "year": 2026
+    },
+    {
+      "date": "2026-05-28",
+      "hour": 8,
+      "name": "Morning Ride",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/18690607651",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -9558,6 +9567,15 @@
           "distance": 22347.1,
           "elevation_gain": 211.0,
           "moving_time": 4107.0
+        },
+        "2026-05-28": {
+          "activity_ids": [
+            "18690607651"
+          ],
+          "count": 1,
+          "distance": 11382.8,
+          "elevation_gain": 69.0,
+          "moving_time": 1850.0
         }
       },
       "RockClimbing": {
@@ -10047,7 +10065,7 @@
       }
     }
   },
-  "generated_at": "2026-05-27T17:56:06.370789+00:00",
+  "generated_at": "2026-05-28T18:07:16.377017+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
