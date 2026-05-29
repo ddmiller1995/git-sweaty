@@ -5070,10 +5070,19 @@
     {
       "date": "2026-05-28",
       "hour": 8,
-      "name": "Morning Ride",
+      "name": "Morning Commute",
       "subtype": "Ride",
       "type": "Ride",
       "url": "https://www.strava.com/activities/18690607651",
+      "year": 2026
+    },
+    {
+      "date": "2026-05-28",
+      "hour": 16,
+      "name": "Work -> Swim -> Home",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/18696719661",
       "year": 2026
     }
   ],
@@ -9570,12 +9579,13 @@
         },
         "2026-05-28": {
           "activity_ids": [
-            "18690607651"
+            "18690607651",
+            "18696719661"
           ],
-          "count": 1,
-          "distance": 11382.8,
-          "elevation_gain": 69.0,
-          "moving_time": 1850.0
+          "count": 2,
+          "distance": 37376.899999999994,
+          "elevation_gain": 280.0,
+          "moving_time": 6368.0
         }
       },
       "RockClimbing": {
@@ -10065,7 +10075,7 @@
       }
     }
   },
-  "generated_at": "2026-05-28T18:07:16.377017+00:00",
+  "generated_at": "2026-05-29T18:10:08.878032+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
