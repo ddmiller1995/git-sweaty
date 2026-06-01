@@ -7356,5 +7356,18 @@
     "start_date_local": "2026-05-30T09:35:47Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-05-31",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "18736915664",
+    "moving_time": 3173.0,
+    "name": "Evening Legs",
+    "raw_activity_type": "WeightTraining",
+    "raw_type": "WeightTraining",
+    "start_date_local": "2026-05-31T18:40:47Z",
+    "type": "WeightTraining",
+    "year": 2026
   }
 ]
