@@ -7395,5 +7395,18 @@
     "start_date_local": "2026-06-03T16:41:05Z",
     "type": "WeightTraining",
     "year": 2026
+  },
+  {
+    "date": "2026-06-04",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "18791382587",
+    "moving_time": 4455.0,
+    "name": "Afternoon Rock Climb",
+    "raw_activity_type": "RockClimbing",
+    "raw_type": "RockClimbing",
+    "start_date_local": "2026-06-04T17:10:17Z",
+    "type": "RockClimbing",
+    "year": 2026
   }
 ]
