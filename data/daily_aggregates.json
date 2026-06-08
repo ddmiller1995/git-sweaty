@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T16:11:22.123330+00:00",
+  "generated_at": "2026-06-08T17:48:47.350786+00:00",
   "years": {
     "2017": {
       "Ride": {
@@ -4152,6 +4152,15 @@
           "distance": 9181.2,
           "elevation_gain": 132.0,
           "moving_time": 8325.0
+        },
+        "2026-06-07": {
+          "activity_ids": [
+            "18830772581"
+          ],
+          "count": 1,
+          "distance": 15056.7,
+          "elevation_gain": 1281.0,
+          "moving_time": 15743.0
         }
       },
       "NordicSki": {

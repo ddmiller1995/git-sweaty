@@ -7408,5 +7408,18 @@
     "start_date_local": "2026-06-04T17:10:17Z",
     "type": "RockClimbing",
     "year": 2026
+  },
+  {
+    "date": "2026-06-07",
+    "distance": 15056.7,
+    "elevation_gain": 1281.0,
+    "id": "18830772581",
+    "moving_time": 15743.0,
+    "name": "More early season exploring",
+    "raw_activity_type": "Hike",
+    "raw_type": "Hike",
+    "start_date_local": "2026-06-07T08:29:00Z",
+    "type": "Hike",
+    "year": 2026
   }
 ]

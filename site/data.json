@@ -5129,6 +5129,15 @@
       "type": "RockClimbing",
       "url": "https://www.strava.com/activities/18791382587",
       "year": 2026
+    },
+    {
+      "date": "2026-06-07",
+      "hour": 8,
+      "name": "More early season exploring",
+      "subtype": "Hike",
+      "type": "Hike",
+      "url": "https://www.strava.com/activities/18830772581",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -9283,6 +9292,15 @@
           "distance": 9181.2,
           "elevation_gain": 132.0,
           "moving_time": 8325.0
+        },
+        "2026-06-07": {
+          "activity_ids": [
+            "18830772581"
+          ],
+          "count": 1,
+          "distance": 15056.7,
+          "elevation_gain": 1281.0,
+          "moving_time": 15743.0
         }
       },
       "NordicSki": {
@@ -10165,7 +10183,7 @@
       }
     }
   },
-  "generated_at": "2026-06-07T16:11:22.135209+00:00",
+  "generated_at": "2026-06-08T17:48:47.362646+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
