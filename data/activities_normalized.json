@@ -7434,5 +7434,18 @@
     "start_date_local": "2026-06-09T16:59:14Z",
     "type": "RockClimbing",
     "year": 2026
+  },
+  {
+    "date": "2026-06-10",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "18873480036",
+    "moving_time": 1800.0,
+    "name": "Anger legs",
+    "raw_activity_type": "WeightTraining",
+    "raw_type": "WeightTraining",
+    "start_date_local": "2026-06-10T21:00:07Z",
+    "type": "WeightTraining",
+    "year": 2026
   }
 ]
