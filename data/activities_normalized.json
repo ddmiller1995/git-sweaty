@@ -7447,5 +7447,18 @@
     "start_date_local": "2026-06-10T21:00:07Z",
     "type": "WeightTraining",
     "year": 2026
+  },
+  {
+    "date": "2026-06-12",
+    "distance": 8358.0,
+    "elevation_gain": 120.0,
+    "id": "18897986109",
+    "moving_time": 2485.0,
+    "name": "Neighborhood meander",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-06-12T20:16:05Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
