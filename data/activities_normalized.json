@@ -7506,10 +7506,23 @@
     "elevation_gain": 71.0,
     "id": "18972918704",
     "moving_time": 1693.0,
-    "name": "Morning Ride",
+    "name": "Morning Commute",
     "raw_activity_type": "Ride",
     "raw_type": "Ride",
     "start_date_local": "2026-06-18T08:04:30Z",
+    "type": "Ride",
+    "year": 2026
+  },
+  {
+    "date": "2026-06-18",
+    "distance": 26395.0,
+    "elevation_gain": 207.0,
+    "id": "18978896217",
+    "moving_time": 4798.0,
+    "name": "Checking out the world cup festivities",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-06-18T16:10:13Z",
     "type": "Ride",
     "year": 2026
   }
