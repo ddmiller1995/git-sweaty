@@ -7551,5 +7551,31 @@
     "start_date_local": "2026-06-19T18:31:07Z",
     "type": "WeightTraining",
     "year": 2026
+  },
+  {
+    "date": "2026-06-20",
+    "distance": 1720.9,
+    "elevation_gain": 16.0,
+    "id": "19001188865",
+    "moving_time": 1308.0,
+    "name": "Dog Walk",
+    "raw_activity_type": "Walk",
+    "raw_type": "Walk",
+    "start_date_local": "2026-06-20T11:49:26Z",
+    "type": "Walk",
+    "year": 2026
+  },
+  {
+    "date": "2026-06-20",
+    "distance": 1694.1,
+    "elevation_gain": 0.0,
+    "id": "19002185421",
+    "moving_time": 2150.0,
+    "name": "Afternoon Pickleball",
+    "raw_activity_type": "Workout",
+    "raw_type": "Pickleball",
+    "start_date_local": "2026-06-20T13:09:48Z",
+    "type": "Pickleball",
+    "year": 2026
   }
 ]

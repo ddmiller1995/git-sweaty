@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T16:14:28.934191+00:00",
+  "generated_at": "2026-06-21T16:27:29.385861+00:00",
   "years": {
     "2017": {
       "Ride": {
@@ -4183,6 +4183,17 @@
           "moving_time": 5228.0
         }
       },
+      "Pickleball": {
+        "2026-06-20": {
+          "activity_ids": [
+            "19002185421"
+          ],
+          "count": 1,
+          "distance": 1694.1,
+          "elevation_gain": 0.0,
+          "moving_time": 2150.0
+        }
+      },
       "Ride": {
         "2026-01-10": {
           "activity_ids": [
@@ -4910,6 +4921,15 @@
           "distance": 2214.6,
           "elevation_gain": 40.0,
           "moving_time": 1872.0
+        },
+        "2026-06-20": {
+          "activity_ids": [
+            "19001188865"
+          ],
+          "count": 1,
+          "distance": 1720.9,
+          "elevation_gain": 16.0,
+          "moving_time": 1308.0
         }
       },
       "WeightTraining": {

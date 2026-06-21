@@ -5228,6 +5228,24 @@
       "type": "WeightTraining",
       "url": "https://www.strava.com/activities/18990943890",
       "year": 2026
+    },
+    {
+      "date": "2026-06-20",
+      "hour": 11,
+      "name": "Dog Walk",
+      "subtype": "Walk",
+      "type": "Walk",
+      "url": "https://www.strava.com/activities/19001188865",
+      "year": 2026
+    },
+    {
+      "date": "2026-06-20",
+      "hour": 13,
+      "name": "Afternoon Pickleball",
+      "subtype": "Pickleball",
+      "type": "Pickleball",
+      "url": "https://www.strava.com/activities/19002185421",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -9413,6 +9431,17 @@
           "moving_time": 5228.0
         }
       },
+      "Pickleball": {
+        "2026-06-20": {
+          "activity_ids": [
+            "19002185421"
+          ],
+          "count": 1,
+          "distance": 1694.1,
+          "elevation_gain": 0.0,
+          "moving_time": 2150.0
+        }
+      },
       "Ride": {
         "2026-01-10": {
           "activity_ids": [
@@ -10140,6 +10169,15 @@
           "distance": 2214.6,
           "elevation_gain": 40.0,
           "moving_time": 1872.0
+        },
+        "2026-06-20": {
+          "activity_ids": [
+            "19001188865"
+          ],
+          "count": 1,
+          "distance": 1720.9,
+          "elevation_gain": 16.0,
+          "moving_time": 1308.0
         }
       },
       "WeightTraining": {
@@ -10355,7 +10393,7 @@
       }
     }
   },
-  "generated_at": "2026-06-20T16:14:28.946414+00:00",
+  "generated_at": "2026-06-21T16:27:29.397765+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
@@ -10379,6 +10417,10 @@
     "NordicSki": {
       "accent": "#72efdd",
       "label": "Nordic Ski"
+    },
+    "Pickleball": {
+      "accent": "#00f5d4",
+      "label": "Pickleball"
     },
     "Ride": {
       "accent": "#05ffa1",
@@ -10417,6 +10459,7 @@
     "GravelRide",
     "Hike",
     "NordicSki",
+    "Pickleball",
     "Ride",
     "RockClimbing",
     "Run",
