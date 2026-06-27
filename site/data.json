@@ -5300,6 +5300,15 @@
       "type": "Ride",
       "url": "https://www.strava.com/activities/19068779919",
       "year": 2026
+    },
+    {
+      "date": "2026-06-26",
+      "hour": 16,
+      "name": "Afternoon Weight Training",
+      "subtype": "WeightTraining",
+      "type": "WeightTraining",
+      "url": "https://www.strava.com/activities/19080590278",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -10452,6 +10461,15 @@
           "distance": 0.0,
           "elevation_gain": 0.0,
           "moving_time": 1013.0
+        },
+        "2026-06-26": {
+          "activity_ids": [
+            "19080590278"
+          ],
+          "count": 1,
+          "distance": 0.0,
+          "elevation_gain": 0.0,
+          "moving_time": 1213.0
         }
       },
       "Workout": {
@@ -10485,7 +10503,7 @@
       }
     }
   },
-  "generated_at": "2026-06-26T16:58:00.474075+00:00",
+  "generated_at": "2026-06-27T16:01:16.237119+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
