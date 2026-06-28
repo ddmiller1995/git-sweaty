@@ -5304,7 +5304,7 @@
     {
       "date": "2026-06-26",
       "hour": 16,
-      "name": "Afternoon Weight Training",
+      "name": "Quick legs",
       "subtype": "WeightTraining",
       "type": "WeightTraining",
       "url": "https://www.strava.com/activities/19080590278",
@@ -10503,7 +10503,7 @@
       }
     }
   },
-  "generated_at": "2026-06-27T16:01:16.237119+00:00",
+  "generated_at": "2026-06-28T16:06:43.679125+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
