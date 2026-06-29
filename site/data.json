@@ -5309,6 +5309,15 @@
       "type": "WeightTraining",
       "url": "https://www.strava.com/activities/19080590278",
       "year": 2026
+    },
+    {
+      "date": "2026-06-28",
+      "hour": 9,
+      "name": "Carnation Gravel loop",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/19102400062",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -9897,6 +9906,15 @@
           "distance": 26079.6,
           "elevation_gain": 247.0,
           "moving_time": 4685.0
+        },
+        "2026-06-28": {
+          "activity_ids": [
+            "19102400062"
+          ],
+          "count": 1,
+          "distance": 48897.1,
+          "elevation_gain": 440.0,
+          "moving_time": 8282.0
         }
       },
       "RockClimbing": {
@@ -10503,7 +10521,7 @@
       }
     }
   },
-  "generated_at": "2026-06-28T16:06:43.679125+00:00",
+  "generated_at": "2026-06-29T17:31:59.834415+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,

@@ -7668,5 +7668,18 @@
     "start_date_local": "2026-06-26T16:59:13Z",
     "type": "WeightTraining",
     "year": 2026
+  },
+  {
+    "date": "2026-06-28",
+    "distance": 48897.1,
+    "elevation_gain": 440.0,
+    "id": "19102400062",
+    "moving_time": 8282.0,
+    "name": "Carnation Gravel loop",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-06-28T09:00:36Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
