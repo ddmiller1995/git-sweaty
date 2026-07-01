@@ -7694,5 +7694,18 @@
     "start_date_local": "2026-06-29T19:12:22Z",
     "type": "Walk",
     "year": 2026
+  },
+  {
+    "date": "2026-06-30",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "19132253884",
+    "moving_time": 1200.0,
+    "name": "20 min Glutes & Legs Strength with Assal Arian",
+    "raw_activity_type": "Workout",
+    "raw_type": "Workout",
+    "start_date_local": "2026-06-30T20:11:24Z",
+    "type": "Workout",
+    "year": 2026
   }
 ]
