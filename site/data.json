@@ -5345,6 +5345,15 @@
       "type": "RockClimbing",
       "url": "https://www.strava.com/activities/19157567033",
       "year": 2026
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 13,
+      "name": "World cup stroll",
+      "subtype": "Walk",
+      "type": "Walk",
+      "url": "https://www.strava.com/activities/19168819739",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -10333,6 +10342,15 @@
           "distance": 4592.4,
           "elevation_gain": 7.0,
           "moving_time": 3463.0
+        },
+        "2026-07-03": {
+          "activity_ids": [
+            "19168819739"
+          ],
+          "count": 1,
+          "distance": 3609.3,
+          "elevation_gain": 31.0,
+          "moving_time": 3144.0
         }
       },
       "WeightTraining": {
@@ -10575,7 +10593,7 @@
       }
     }
   },
-  "generated_at": "2026-07-03T16:22:08.247062+00:00",
+  "generated_at": "2026-07-04T15:57:17.316501+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,

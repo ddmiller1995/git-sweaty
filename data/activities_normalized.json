@@ -7720,5 +7720,18 @@
     "start_date_local": "2026-07-02T16:55:52Z",
     "type": "RockClimbing",
     "year": 2026
+  },
+  {
+    "date": "2026-07-03",
+    "distance": 3609.3,
+    "elevation_gain": 31.0,
+    "id": "19168819739",
+    "moving_time": 3144.0,
+    "name": "World cup stroll",
+    "raw_activity_type": "Walk",
+    "raw_type": "Walk",
+    "start_date_local": "2026-07-03T13:52:51Z",
+    "type": "Walk",
+    "year": 2026
   }
 ]
