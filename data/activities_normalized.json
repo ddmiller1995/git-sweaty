@@ -7733,5 +7733,31 @@
     "start_date_local": "2026-07-03T13:52:51Z",
     "type": "Walk",
     "year": 2026
+  },
+  {
+    "date": "2026-07-04",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "19180357191",
+    "moving_time": 2638.0,
+    "name": "Morning Rock Climb",
+    "raw_activity_type": "RockClimbing",
+    "raw_type": "RockClimbing",
+    "start_date_local": "2026-07-04T10:58:55Z",
+    "type": "RockClimbing",
+    "year": 2026
+  },
+  {
+    "date": "2026-07-04",
+    "distance": 1968.3,
+    "elevation_gain": 7.0,
+    "id": "19181936166",
+    "moving_time": 408.0,
+    "name": "Parking at Magnuson on the 4th",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-07-04T13:24:34Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]

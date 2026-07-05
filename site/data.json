@@ -5354,6 +5354,24 @@
       "type": "Walk",
       "url": "https://www.strava.com/activities/19168819739",
       "year": 2026
+    },
+    {
+      "date": "2026-07-04",
+      "hour": 10,
+      "name": "Morning Rock Climb",
+      "subtype": "RockClimbing",
+      "type": "RockClimbing",
+      "url": "https://www.strava.com/activities/19180357191",
+      "year": 2026
+    },
+    {
+      "date": "2026-07-04",
+      "hour": 13,
+      "name": "Parking at Magnuson on the 4th",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/19181936166",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -9951,6 +9969,15 @@
           "distance": 48897.1,
           "elevation_gain": 440.0,
           "moving_time": 8282.0
+        },
+        "2026-07-04": {
+          "activity_ids": [
+            "19181936166"
+          ],
+          "count": 1,
+          "distance": 1968.3,
+          "elevation_gain": 7.0,
+          "moving_time": 408.0
         }
       },
       "RockClimbing": {
@@ -10250,6 +10277,15 @@
           "distance": 0.0,
           "elevation_gain": 0.0,
           "moving_time": 3359.0
+        },
+        "2026-07-04": {
+          "activity_ids": [
+            "19180357191"
+          ],
+          "count": 1,
+          "distance": 0.0,
+          "elevation_gain": 0.0,
+          "moving_time": 2638.0
         }
       },
       "Walk": {
@@ -10593,7 +10629,7 @@
       }
     }
   },
-  "generated_at": "2026-07-04T15:57:17.316501+00:00",
+  "generated_at": "2026-07-05T16:02:49.976134+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
