@@ -7772,5 +7772,18 @@
     "start_date_local": "2026-07-05T08:40:22Z",
     "type": "Hike",
     "year": 2026
+  },
+  {
+    "date": "2026-07-07",
+    "distance": 17465.1,
+    "elevation_gain": 111.0,
+    "id": "19223475932",
+    "moving_time": 2797.0,
+    "name": "Evening laps",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-07-07T19:44:04Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
