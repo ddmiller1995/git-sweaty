@@ -7824,5 +7824,18 @@
     "start_date_local": "2026-07-09T17:00:19Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-07-11",
+    "distance": 2208.9,
+    "elevation_gain": 146.0,
+    "id": "19275807831",
+    "moving_time": 2368.0,
+    "name": "Afternoon Stairs",
+    "raw_activity_type": "Walk",
+    "raw_type": "Walk",
+    "start_date_local": "2026-07-11T17:25:33Z",
+    "type": "Walk",
+    "year": 2026
   }
 ]
