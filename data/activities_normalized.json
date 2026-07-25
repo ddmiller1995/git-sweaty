@@ -7876,5 +7876,18 @@
     "start_date_local": "2026-07-22T15:33:24Z",
     "type": "Workout",
     "year": 2026
+  },
+  {
+    "date": "2026-07-24",
+    "distance": 9372.0,
+    "elevation_gain": 0.0,
+    "id": "19451568399",
+    "moving_time": 1200.0,
+    "name": "20 min Rolling Hills Ride with Ally Love",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-07-24T16:08:35Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
