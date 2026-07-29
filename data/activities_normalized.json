@@ -7889,5 +7889,18 @@
     "start_date_local": "2026-07-24T16:08:35Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-07-28",
+    "distance": 12186.1,
+    "elevation_gain": 113.0,
+    "id": "19507043685",
+    "moving_time": 2308.0,
+    "name": "Amazing how much harder exercise is when sleep deprived",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-07-28T14:59:01Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]

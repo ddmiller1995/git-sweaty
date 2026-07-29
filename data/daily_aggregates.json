@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T16:30:13.513559+00:00",
+  "generated_at": "2026-07-29T16:17:16.999248+00:00",
   "years": {
     "2017": {
       "Ride": {
@@ -4650,6 +4650,15 @@
           "distance": 9372.0,
           "elevation_gain": 0.0,
           "moving_time": 1200.0
+        },
+        "2026-07-28": {
+          "activity_ids": [
+            "19507043685"
+          ],
+          "count": 1,
+          "distance": 12186.1,
+          "elevation_gain": 113.0,
+          "moving_time": 2308.0
         }
       },
       "RockClimbing": {
