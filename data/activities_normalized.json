@@ -7941,5 +7941,31 @@
     "start_date_local": "2026-08-01T14:05:14Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-08-03",
+    "distance": 9700.9,
+    "elevation_gain": 0.0,
+    "id": "19590212705",
+    "moving_time": 1200.0,
+    "name": "20 min Rolling Hills Ride with Ally Love",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-08-03T16:45:47Z",
+    "type": "Ride",
+    "year": 2026
+  },
+  {
+    "date": "2026-08-03",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "19590602264",
+    "moving_time": 921.0,
+    "name": "Afternoon Weight Training",
+    "raw_activity_type": "WeightTraining",
+    "raw_type": "WeightTraining",
+    "start_date_local": "2026-08-03T17:11:08Z",
+    "type": "WeightTraining",
+    "year": 2026
   }
 ]

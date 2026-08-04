@@ -5498,6 +5498,24 @@
       "type": "Ride",
       "url": "https://www.strava.com/activities/19562071672",
       "year": 2026
+    },
+    {
+      "date": "2026-08-03",
+      "hour": 16,
+      "name": "20 min Rolling Hills Ride with Ally Love",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/19590212705",
+      "year": 2026
+    },
+    {
+      "date": "2026-08-03",
+      "hour": 17,
+      "name": "Afternoon Weight Training",
+      "subtype": "WeightTraining",
+      "type": "WeightTraining",
+      "url": "https://www.strava.com/activities/19590602264",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -10168,6 +10186,15 @@
           "distance": 27906.0,
           "elevation_gain": 242.0,
           "moving_time": 4618.0
+        },
+        "2026-08-03": {
+          "activity_ids": [
+            "19590212705"
+          ],
+          "count": 1,
+          "distance": 9700.9,
+          "elevation_gain": 0.0,
+          "moving_time": 1200.0
         }
       },
       "RockClimbing": {
@@ -10813,6 +10840,15 @@
           "distance": 0.0,
           "elevation_gain": 0.0,
           "moving_time": 5111.0
+        },
+        "2026-08-03": {
+          "activity_ids": [
+            "19590602264"
+          ],
+          "count": 1,
+          "distance": 0.0,
+          "elevation_gain": 0.0,
+          "moving_time": 921.0
         }
       },
       "Workout": {
@@ -10873,7 +10909,7 @@
       }
     }
   },
-  "generated_at": "2026-08-03T17:06:27.749253+00:00",
+  "generated_at": "2026-08-04T16:49:02.357553+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
