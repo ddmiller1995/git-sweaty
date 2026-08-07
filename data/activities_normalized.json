@@ -7967,5 +7967,18 @@
     "start_date_local": "2026-08-03T17:11:08Z",
     "type": "WeightTraining",
     "year": 2026
+  },
+  {
+    "date": "2026-08-06",
+    "distance": 14317.8,
+    "elevation_gain": 0.0,
+    "id": "19634131362",
+    "moving_time": 1800.0,
+    "name": "30 min 2000s Hip Hop Ride with Alex Toussaint",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-08-06T16:31:00Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
