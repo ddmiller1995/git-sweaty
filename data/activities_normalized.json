@@ -7993,5 +7993,18 @@
     "start_date_local": "2026-08-09T14:04:42Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-08-11",
+    "distance": 5532.4,
+    "elevation_gain": 78.0,
+    "id": "19701624613",
+    "moving_time": 951.0,
+    "name": "Car pickup",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-08-11T12:58:34Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
