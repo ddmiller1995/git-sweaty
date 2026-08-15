@@ -5543,6 +5543,24 @@
       "type": "Ride",
       "url": "https://www.strava.com/activities/19701624613",
       "year": 2026
+    },
+    {
+      "date": "2026-08-14",
+      "hour": 17,
+      "name": "20 min Tabata Ride with Ally Love",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/19745351207",
+      "year": 2026
+    },
+    {
+      "date": "2026-08-14",
+      "hour": 17,
+      "name": "Quick strength set",
+      "subtype": "WeightTraining",
+      "type": "WeightTraining",
+      "url": "https://www.strava.com/activities/19745511105",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -10249,6 +10267,15 @@
           "distance": 5532.4,
           "elevation_gain": 78.0,
           "moving_time": 951.0
+        },
+        "2026-08-14": {
+          "activity_ids": [
+            "19745351207"
+          ],
+          "count": 1,
+          "distance": 9585.9,
+          "elevation_gain": 0.0,
+          "moving_time": 1200.0
         }
       },
       "RockClimbing": {
@@ -10903,6 +10930,15 @@
           "distance": 0.0,
           "elevation_gain": 0.0,
           "moving_time": 921.0
+        },
+        "2026-08-14": {
+          "activity_ids": [
+            "19745511105"
+          ],
+          "count": 1,
+          "distance": 0.0,
+          "elevation_gain": 0.0,
+          "moving_time": 900.0
         }
       },
       "Workout": {
@@ -10963,7 +10999,7 @@
       }
     }
   },
-  "generated_at": "2026-08-14T15:45:27.311161+00:00",
+  "generated_at": "2026-08-15T15:14:57.268696+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
