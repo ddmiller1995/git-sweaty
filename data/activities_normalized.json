@@ -8045,5 +8045,18 @@
     "start_date_local": "2026-08-16T14:58:59Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-08-19",
+    "distance": 13453.0,
+    "elevation_gain": 81.0,
+    "id": "19816563568",
+    "moving_time": 2045.0,
+    "name": "Greenlake speedway",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-08-19T16:09:14Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
