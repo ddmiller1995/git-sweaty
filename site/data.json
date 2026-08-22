@@ -5579,6 +5579,15 @@
       "type": "Ride",
       "url": "https://www.strava.com/activities/19816563568",
       "year": 2026
+    },
+    {
+      "date": "2026-08-21",
+      "hour": 17,
+      "name": "Full body classic circuit",
+      "subtype": "WeightTraining",
+      "type": "WeightTraining",
+      "url": "https://www.strava.com/activities/19843834781",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -10975,6 +10984,15 @@
           "distance": 0.0,
           "elevation_gain": 0.0,
           "moving_time": 900.0
+        },
+        "2026-08-21": {
+          "activity_ids": [
+            "19843834781"
+          ],
+          "count": 1,
+          "distance": 0.0,
+          "elevation_gain": 0.0,
+          "moving_time": 1800.0
         }
       },
       "Workout": {
@@ -11035,7 +11053,7 @@
       }
     }
   },
-  "generated_at": "2026-08-21T15:27:10.209742+00:00",
+  "generated_at": "2026-08-22T15:15:13.897836+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
