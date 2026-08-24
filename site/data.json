@@ -5588,6 +5588,15 @@
       "type": "WeightTraining",
       "url": "https://www.strava.com/activities/19843834781",
       "year": 2026
+    },
+    {
+      "date": "2026-08-23",
+      "hour": 13,
+      "name": "Afternoon Ride",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/19871245328",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -10321,6 +10330,15 @@
           "distance": 13453.0,
           "elevation_gain": 81.0,
           "moving_time": 2045.0
+        },
+        "2026-08-23": {
+          "activity_ids": [
+            "19871245328"
+          ],
+          "count": 1,
+          "distance": 28063.7,
+          "elevation_gain": 221.0,
+          "moving_time": 4916.0
         }
       },
       "RockClimbing": {
@@ -11053,7 +11071,7 @@
       }
     }
   },
-  "generated_at": "2026-08-23T15:16:34.727608+00:00",
+  "generated_at": "2026-08-24T15:34:10.444839+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
