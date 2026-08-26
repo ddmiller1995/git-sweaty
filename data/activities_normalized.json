@@ -8084,5 +8084,18 @@
     "start_date_local": "2026-08-23T13:31:23Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-08-25",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "19900487942",
+    "moving_time": 900.0,
+    "name": "Cardiac stress test",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-08-25T15:45:57Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
