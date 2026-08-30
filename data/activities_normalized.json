@@ -8123,5 +8123,31 @@
     "start_date_local": "2026-08-28T17:28:54Z",
     "type": "WeightTraining",
     "year": 2026
+  },
+  {
+    "date": "2026-08-29",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "19954006820",
+    "moving_time": 3577.0,
+    "name": "Lunch Rock Climb",
+    "raw_activity_type": "RockClimbing",
+    "raw_type": "RockClimbing",
+    "start_date_local": "2026-08-29T11:44:39Z",
+    "type": "RockClimbing",
+    "year": 2026
+  },
+  {
+    "date": "2026-08-29",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "19954098253",
+    "moving_time": 673.0,
+    "name": "Lunch Stair-Stepper",
+    "raw_activity_type": "StairStepper",
+    "raw_type": "StairStepper",
+    "start_date_local": "2026-08-29T12:45:51Z",
+    "type": "StairStepper",
+    "year": 2026
   }
 ]
