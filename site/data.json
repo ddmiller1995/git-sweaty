@@ -5669,6 +5669,15 @@
       "type": "Ride",
       "url": "https://www.strava.com/activities/20027154439",
       "year": 2026
+    },
+    {
+      "date": "2026-09-05",
+      "hour": 16,
+      "name": "Maple Leaf stairs",
+      "subtype": "Hike",
+      "type": "Hike",
+      "url": "https://www.strava.com/activities/20054027967",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -9850,6 +9859,15 @@
           "distance": 19701.4,
           "elevation_gain": 1467.0,
           "moving_time": 15600.0
+        },
+        "2026-09-05": {
+          "activity_ids": [
+            "20054027967"
+          ],
+          "count": 1,
+          "distance": 2771.8,
+          "elevation_gain": 229.0,
+          "moving_time": 3035.0
         }
       },
       "NordicSki": {
@@ -11211,7 +11229,7 @@
       }
     }
   },
-  "generated_at": "2026-09-05T17:04:16.214372+00:00",
+  "generated_at": "2026-09-06T17:27:42.361832+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,

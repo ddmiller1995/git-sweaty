@@ -8188,5 +8188,18 @@
     "start_date_local": "2026-09-03T15:00:00Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-09-05",
+    "distance": 2771.8,
+    "elevation_gain": 229.0,
+    "id": "20054027967",
+    "moving_time": 3035.0,
+    "name": "Maple Leaf stairs",
+    "raw_activity_type": "Hike",
+    "raw_type": "Hike",
+    "start_date_local": "2026-09-05T16:29:25Z",
+    "type": "Hike",
+    "year": 2026
   }
 ]
