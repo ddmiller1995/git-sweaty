@@ -8201,5 +8201,18 @@
     "start_date_local": "2026-09-05T16:29:25Z",
     "type": "Hike",
     "year": 2026
+  },
+  {
+    "date": "2026-09-09",
+    "distance": 18264.6,
+    "elevation_gain": 186.0,
+    "id": "20108700808",
+    "moving_time": 2914.0,
+    "name": "Mag dip",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-09-09T12:20:03Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]

@@ -5678,6 +5678,15 @@
       "type": "Hike",
       "url": "https://www.strava.com/activities/20054027967",
       "year": 2026
+    },
+    {
+      "date": "2026-09-09",
+      "hour": 12,
+      "name": "Mag dip",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/20108700808",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -10456,6 +10465,15 @@
           "distance": 31095.4,
           "elevation_gain": 188.0,
           "moving_time": 4967.0
+        },
+        "2026-09-09": {
+          "activity_ids": [
+            "20108700808"
+          ],
+          "count": 1,
+          "distance": 18264.6,
+          "elevation_gain": 186.0,
+          "moving_time": 2914.0
         }
       },
       "RockClimbing": {
@@ -11229,7 +11247,7 @@
       }
     }
   },
-  "generated_at": "2026-09-09T18:15:36.516395+00:00",
+  "generated_at": "2026-09-10T18:00:01.072483+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
