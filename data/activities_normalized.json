@@ -8214,5 +8214,18 @@
     "start_date_local": "2026-09-09T12:20:03Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-09-10",
+    "distance": 14258.5,
+    "elevation_gain": 113.0,
+    "id": "20123548083",
+    "moving_time": 2255.0,
+    "name": "Time trial derailed by geese",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-09-10T15:44:38Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
