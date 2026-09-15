@@ -8279,5 +8279,18 @@
     "start_date_local": "2026-09-12T17:51:03Z",
     "type": "Walk",
     "year": 2026
+  },
+  {
+    "date": "2026-09-14",
+    "distance": 44049.4,
+    "elevation_gain": 455.0,
+    "id": "20178331321",
+    "moving_time": 7192.0,
+    "name": "Thank god there were no cars on the 520 bike lane today",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-09-14T15:05:36Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
