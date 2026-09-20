@@ -5750,6 +5750,15 @@
       "type": "WeightTraining",
       "url": "https://www.strava.com/activities/20206876690",
       "year": 2026
+    },
+    {
+      "date": "2026-09-19",
+      "hour": 11,
+      "name": "Lunch Ride",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/20245737376",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -10555,6 +10564,15 @@
           "distance": 44049.4,
           "elevation_gain": 455.0,
           "moving_time": 7192.0
+        },
+        "2026-09-19": {
+          "activity_ids": [
+            "20245737376"
+          ],
+          "count": 1,
+          "distance": 37727.7,
+          "elevation_gain": 144.8,
+          "moving_time": 5651.0
         }
       },
       "RockClimbing": {
@@ -11373,7 +11391,7 @@
       }
     }
   },
-  "generated_at": "2026-09-19T17:42:26.450024+00:00",
+  "generated_at": "2026-09-20T17:53:14.140645+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
