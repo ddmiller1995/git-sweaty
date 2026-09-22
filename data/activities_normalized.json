@@ -8318,5 +8318,18 @@
     "start_date_local": "2026-09-19T11:02:40Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-09-21",
+    "distance": 16394.8,
+    "elevation_gain": 80.0,
+    "id": "20273989885",
+    "moving_time": 2501.0,
+    "name": "No geese this time",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-09-21T14:59:31Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]

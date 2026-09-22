@@ -5759,6 +5759,15 @@
       "type": "Ride",
       "url": "https://www.strava.com/activities/20245737376",
       "year": 2026
+    },
+    {
+      "date": "2026-09-21",
+      "hour": 14,
+      "name": "No geese this time",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/20273989885",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -10573,6 +10582,15 @@
           "distance": 37727.7,
           "elevation_gain": 144.8,
           "moving_time": 5651.0
+        },
+        "2026-09-21": {
+          "activity_ids": [
+            "20273989885"
+          ],
+          "count": 1,
+          "distance": 16394.8,
+          "elevation_gain": 80.0,
+          "moving_time": 2501.0
         }
       },
       "RockClimbing": {
@@ -11391,7 +11409,7 @@
       }
     }
   },
-  "generated_at": "2026-09-21T19:50:48.103691+00:00",
+  "generated_at": "2026-09-22T18:27:51.170872+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
