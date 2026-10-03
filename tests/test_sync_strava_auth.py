@@ -128,5 +128,29 @@ class SyncStravaAuthTests(unittest.TestCase):
                 self.assertEqual(payload.get("refresh_token"), "r")
 
 
+class RecentSyncWindowTests(unittest.TestCase):
+    NOW = datetime(2026, 10, 3, 18, 0, tzinfo=timezone.utc)
+
+    def _after(self, state: dict) -> datetime:
+        with mock.patch("sync_strava.utc_now", return_value=self.NOW):
+            ts = sync_strava._recent_sync_after_ts(7, state)
+        return datetime.fromtimestamp(ts, tz=timezone.utc)
+
+    def test_defaults_to_recent_days_without_prior_sync(self) -> None:
+        self.assertEqual(self._after({}), datetime(2026, 9, 26, 18, 0, tzinfo=timezone.utc))
+
+    def test_recent_prior_sync_keeps_recent_days_window(self) -> None:
+        state = {"recent_synced_through_utc": "2026-10-02T18:00:00+00:00"}
+        self.assertEqual(self._after(state), datetime(2026, 9, 26, 18, 0, tzinfo=timezone.utc))
+
+    def test_widens_window_after_failed_runs(self) -> None:
+        state = {"recent_synced_through_utc": "2026-09-25T19:05:00+00:00"}
+        self.assertEqual(self._after(state), datetime(2026, 9, 24, 19, 5, tzinfo=timezone.utc))
+
+    def test_ignores_invalid_prior_sync_timestamp(self) -> None:
+        state = {"recent_synced_through_utc": "not-a-date"}
+        self.assertEqual(self._after(state), datetime(2026, 9, 26, 18, 0, tzinfo=timezone.utc))
+
+
 if __name__ == "__main__":
     unittest.main()
