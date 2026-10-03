@@ -8331,5 +8331,31 @@
     "start_date_local": "2026-09-21T14:59:31Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-10-01",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "20439429132",
+    "moving_time": 3203.0,
+    "name": "Afternoon Rock Climb",
+    "raw_activity_type": "RockClimbing",
+    "raw_type": "RockClimbing",
+    "start_date_local": "2026-10-01T15:00:35Z",
+    "type": "RockClimbing",
+    "year": 2026
+  },
+  {
+    "date": "2026-10-03",
+    "distance": 31600.4,
+    "elevation_gain": 305.0,
+    "id": "20439439751",
+    "moving_time": 5143.0,
+    "name": "Afternoon Ride",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-10-03T13:46:07Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
