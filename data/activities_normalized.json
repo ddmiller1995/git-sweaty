@@ -7839,19 +7839,6 @@
     "year": 2026
   },
   {
-    "date": "2026-07-12",
-    "distance": 0.0,
-    "elevation_gain": 0.0,
-    "id": "19287833865",
-    "moving_time": 44439.0,
-    "name": "Night Workout",
-    "raw_activity_type": "Workout",
-    "raw_type": "Workout",
-    "start_date_local": "2026-07-12T02:23:20Z",
-    "type": "Workout",
-    "year": 2026
-  },
-  {
     "date": "2026-07-21",
     "distance": 8551.0,
     "elevation_gain": 0.0,
@@ -8135,19 +8122,6 @@
     "raw_type": "RockClimbing",
     "start_date_local": "2026-08-29T11:44:39Z",
     "type": "RockClimbing",
-    "year": 2026
-  },
-  {
-    "date": "2026-08-29",
-    "distance": 0.0,
-    "elevation_gain": 0.0,
-    "id": "19954098253",
-    "moving_time": 673.0,
-    "name": "Lunch Stair-Stepper",
-    "raw_activity_type": "StairStepper",
-    "raw_type": "StairStepper",
-    "start_date_local": "2026-08-29T12:45:51Z",
-    "type": "StairStepper",
     "year": 2026
   },
   {
