@@ -8331,5 +8331,18 @@
     "start_date_local": "2026-10-03T13:46:07Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-10-06",
+    "distance": 4902.8,
+    "elevation_gain": 108.0,
+    "id": "20483689722",
+    "moving_time": 4150.0,
+    "name": "First family hike \u2764\ufe0f",
+    "raw_activity_type": "Hike",
+    "raw_type": "Hike",
+    "start_date_local": "2026-10-06T13:39:56Z",
+    "type": "Hike",
+    "year": 2026
   }
 ]
