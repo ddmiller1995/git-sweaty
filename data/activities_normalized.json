@@ -8344,5 +8344,18 @@
     "start_date_local": "2026-10-06T13:39:56Z",
     "type": "Hike",
     "year": 2026
+  },
+  {
+    "date": "2026-10-08",
+    "distance": 18040.2,
+    "elevation_gain": 1152.0,
+    "id": "20508259488",
+    "moving_time": 14999.0,
+    "name": "Larches!!!",
+    "raw_activity_type": "Hike",
+    "raw_type": "Hike",
+    "start_date_local": "2026-10-08T08:07:36Z",
+    "type": "Hike",
+    "year": 2026
   }
 ]

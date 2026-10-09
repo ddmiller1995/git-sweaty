@@ -5777,6 +5777,15 @@
       "type": "Hike",
       "url": "https://www.strava.com/activities/20483689722",
       "year": 2026
+    },
+    {
+      "date": "2026-10-08",
+      "hour": 8,
+      "name": "Larches!!!",
+      "subtype": "Hike",
+      "type": "Hike",
+      "url": "https://www.strava.com/activities/20508259488",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -9976,6 +9985,15 @@
           "distance": 4902.8,
           "elevation_gain": 108.0,
           "moving_time": 4150.0
+        },
+        "2026-10-08": {
+          "activity_ids": [
+            "20508259488"
+          ],
+          "count": 1,
+          "distance": 18040.2,
+          "elevation_gain": 1152.0,
+          "moving_time": 14999.0
         }
       },
       "NordicSki": {
@@ -11435,7 +11453,7 @@
       }
     }
   },
-  "generated_at": "2026-10-08T20:27:20.401961+00:00",
+  "generated_at": "2026-10-09T19:58:22.318090+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
