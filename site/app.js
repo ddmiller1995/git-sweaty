@@ -3607,10 +3607,45 @@ function formatGraphAxisLabel(metricKey, value, units) {
   return String(Math.round(value));
 }
 
-function buildYearGraphArea(aggregates, year, units, graphMetricKey, goals) {
+const celebratedGoalKeys = new Set();
+
+function launchGoalConfetti(container) {
+  if (!container || !container.isConnected) return;
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const colors = ["#38bdf8", "#facc15", "#f472b6", "#4ade80", "#fb923c", "#a78bfa"];
+  const layer = document.createElement("div");
+  layer.className = "goal-confetti-layer";
+  container.appendChild(layer);
+  const count = 60;
+  let finished = 0;
+  for (let i = 0; i < count; i++) {
+    const piece = document.createElement("span");
+    piece.className = "goal-confetti-piece";
+    piece.style.background = colors[i % colors.length];
+    piece.style.left = `${50 + (Math.random() - 0.5) * 20}%`;
+    piece.style.top = "40%";
+    layer.appendChild(piece);
+    const dx = (Math.random() - 0.5) * container.clientWidth * 0.9;
+    const rise = -(30 + Math.random() * 90);
+    const fall = 60 + Math.random() * 120;
+    const spin = (Math.random() - 0.5) * 900;
+    const anim = piece.animate([
+      { transform: "translate(0, 0) rotate(0deg)", opacity: 1 },
+      { transform: `translate(${dx * 0.6}px, ${rise}px) rotate(${spin * 0.5}deg)`, opacity: 1, offset: 0.35 },
+      { transform: `translate(${dx}px, ${fall}px) rotate(${spin}deg)`, opacity: 0 },
+    ], { duration: 1600 + Math.random() * 900, easing: "cubic-bezier(.2,.7,.4,1)", fill: "forwards" });
+    anim.onfinish = () => {
+      finished += 1;
+      if (finished === count) layer.remove();
+    };
+  }
+}
+
+function buildYearGraphArea(aggregates, year, units, graphMetricKey, goals, graphOptions = {}) {
+  const expanded = Boolean(graphOptions.expanded);
   const PAD = { top: 14, right: 20, bottom: 28, left: 52 };
   const W = 780;
-  const H = 160;
+  const H = expanded ? 340 : 160;
   const CW = W - PAD.left - PAD.right; // 708
   const CH = H - PAD.top - PAD.bottom; // 118
 
@@ -3629,6 +3664,7 @@ function buildYearGraphArea(aggregates, year, units, graphMetricKey, goals) {
   svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
   svg.setAttribute("aria-hidden", "true");
   svg.classList.add("year-graph-svg");
+  svg.style.height = `${H}px`;
 
   const el = (tag, attrs = {}) => {
     const node = document.createElementNS(svgNS, tag);
@@ -3673,18 +3709,23 @@ function buildYearGraphArea(aggregates, year, units, graphMetricKey, goals) {
     }
   });
 
-  // Goal-pace line
+  // Goal target line (horizontal, dotted) + goal-pace line
+  const goalReached = Boolean(goalValue) && isCurrentYear && actualTotal >= goalValue;
   if (goalValue) {
+    svg.appendChild(el("line", {
+      class: `goal-target-line${goalReached ? " goal-reached" : ""}`,
+      x1: PAD.left, y1: yOf(goalValue), x2: PAD.left + CW, y2: yOf(goalValue),
+    }));
     svg.appendChild(el("path", {
       class: "goal-line",
       d: `M ${xOf(0)} ${yOf(0)} L ${xOf(totalDays - 1)} ${yOf(goalValue)}`,
     }));
     const goalLabel = Object.assign(el("text", {
       class: "goal-label",
-      x: xOf(totalDays - 1) - 2,
+      x: PAD.left + 4,
       y: yOf(goalValue) - 5,
-      "text-anchor": "end",
-    }), { textContent: `Goal: ${formatGraphAxisLabel(graphMetricKey, goalValue, units)}` });
+      "text-anchor": "start",
+    }), { textContent: `${goalReached ? "Goal reached! " : "Goal: "}${formatGraphAxisLabel(graphMetricKey, goalValue, units)}` });
     svg.appendChild(goalLabel);
   }
 
@@ -3716,6 +3757,25 @@ function buildYearGraphArea(aggregates, year, units, graphMetricKey, goals) {
   container.className = "year-graph-container";
   container.appendChild(svg);
 
+  if (typeof graphOptions.onToggleExpand === "function") {
+    const toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "year-graph-expand-toggle";
+    toggle.textContent = expanded ? "Collapse" : "Expand";
+    toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+    toggle.setAttribute("aria-label", expanded ? "Collapse graph" : "Expand graph");
+    toggle.addEventListener("click", () => graphOptions.onToggleExpand());
+    container.appendChild(toggle);
+  }
+
+  if (goalReached) {
+    const celebrationKey = `${year}:${graphMetricKey}:${goalValue}`;
+    if (!celebratedGoalKeys.has(celebrationKey)) {
+      celebratedGoalKeys.add(celebrationKey);
+      setTimeout(() => launchGoalConfetti(container), 250);
+    }
+  }
+
   // Today dot + tooltip (current year only)
   if (isCurrentYear && elapsedDays > 0) {
     const dot = el("circle", {
@@ -3745,6 +3805,9 @@ function buildYearGraphArea(aggregates, year, units, graphMetricKey, goals) {
     ];
 
     dot.style.cursor = "pointer";
+    if (goalReached) {
+      dot.addEventListener("click", () => launchGoalConfetti(container));
+    }
     dot.addEventListener("mouseenter", (e) => showTooltip(tipLines, e.clientX, e.clientY));
     dot.addEventListener("mousemove", (e) => showTooltip(tipLines, e.clientX, e.clientY));
     dot.addEventListener("mouseleave", () => hideTooltip());
@@ -3787,6 +3850,7 @@ function buildCard(type, year, aggregates, units, options = {}) {
     : null;
   let heatmapArea = null;
   let graphContainer = null;
+  let graphExpanded = false;
 
   const totals = {
     count: 0,
@@ -3828,7 +3892,13 @@ function buildCard(type, year, aggregates, units, options = {}) {
 
   const renderGraph = () => {
     const graphMetricKey = getGraphMetricKey(activeMetricKey);
-    const nextGraphContainer = buildYearGraphArea(aggregates, year, units, graphMetricKey, goals);
+    const nextGraphContainer = buildYearGraphArea(aggregates, year, units, graphMetricKey, goals, {
+      expanded: graphExpanded,
+      onToggleExpand: () => {
+        graphExpanded = !graphExpanded;
+        renderGraph();
+      },
+    });
     if (graphContainer && graphContainer.parentNode === body) {
       body.replaceChild(nextGraphContainer, graphContainer);
     } else {
