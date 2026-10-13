@@ -3721,7 +3721,7 @@ function buildYearGraphArea(aggregates, year, units, graphMetricKey, goals, grap
       d: `M ${xOf(0)} ${yOf(0)} L ${xOf(totalDays - 1)} ${yOf(goalValue)}`,
     }));
     const goalLabel = Object.assign(el("text", {
-      class: "goal-label",
+      class: `goal-label${goalReached ? " goal-reached" : ""}`,
       x: PAD.left + 4,
       y: yOf(goalValue) - 5,
       "text-anchor": "start",
