@@ -5795,6 +5795,15 @@
       "type": "Ride",
       "url": "https://www.strava.com/activities/20561501922",
       "year": 2026
+    },
+    {
+      "date": "2026-10-14",
+      "hour": 15,
+      "name": "Legs",
+      "subtype": "WeightTraining",
+      "type": "WeightTraining",
+      "url": "https://www.strava.com/activities/20588543917",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -11420,6 +11429,15 @@
           "distance": 0.0,
           "elevation_gain": 0.0,
           "moving_time": 1391.0
+        },
+        "2026-10-14": {
+          "activity_ids": [
+            "20588543917"
+          ],
+          "count": 1,
+          "distance": 0.0,
+          "elevation_gain": 0.0,
+          "moving_time": 1200.0
         }
       },
       "Workout": {
@@ -11471,7 +11489,7 @@
       }
     }
   },
-  "generated_at": "2026-10-14T19:07:53.128070+00:00",
+  "generated_at": "2026-10-15T18:50:34.137182+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
