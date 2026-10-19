@@ -26,6 +26,8 @@ STATE_PATH = os.path.join("data", "backfill_state_strava.json")
 LEGACY_STATE_PATH = os.path.join("data", "backfill_state.json")
 ATHLETE_PATH = os.path.join("data", "athletes_strava.json")
 LEGACY_ATHLETE_PATH = os.path.join("data", "athletes.json")
+# Overlap kept when widening the recent-sync window to the last successful sync.
+RECENT_SYNC_OVERLAP = timedelta(days=1)
 TRANSIENT_HTTP_STATUS_CODES = {408, 425, 429, 500, 502, 503, 504, 597}
 MAX_REQUEST_ATTEMPTS = 5
 
@@ -589,6 +591,26 @@ def _save_state(state: Dict) -> None:
     write_json(STATE_PATH, state)
 
 
+def _recent_sync_after_ts(recent_days: int, state: Dict) -> int:
+    """Start of the recent-sync window.
+
+    Normally the last `recent_days`, but widened back to the last successful
+    recent sync so that a stretch of failed runs (expired token, API outage)
+    longer than `recent_days` doesn't silently skip activities.
+    """
+    after_dt = utc_now() - timedelta(days=recent_days)
+    synced_through = state.get("recent_synced_through_utc")
+    if synced_through:
+        try:
+            synced_dt = datetime.fromisoformat(str(synced_through))
+            if synced_dt.tzinfo is None:
+                synced_dt = synced_dt.replace(tzinfo=timezone.utc)
+            after_dt = min(after_dt, synced_dt - RECENT_SYNC_OVERLAP)
+        except ValueError:
+            pass
+    return int(after_dt.timestamp())
+
+
 def _sync_recent(
     config: Dict,
     token: str,
@@ -596,6 +618,7 @@ def _sync_recent(
     recent_days: int,
     limiter: RateLimiter,
     dry_run: bool,
+    state: Optional[Dict] = None,
 ) -> Tuple[Dict, str]:
     if recent_days <= 0:
         return (
@@ -610,7 +633,7 @@ def _sync_recent(
             token,
         )
 
-    after = int((utc_now() - timedelta(days=recent_days)).timestamp())
+    after = _recent_sync_after_ts(recent_days, state or {})
     page = 1
     total = 0
     new_or_updated = 0
@@ -689,9 +712,15 @@ def sync_strava(dry_run: bool, prune_deleted: bool) -> Dict:
 
     ensure_dir(RAW_DIR)
 
+    prior_state = _load_state()
+    recent_started_utc = utc_now()
     recent_summary, token = _sync_recent(
-        config, token, per_page, recent_days, limiter, dry_run
+        config, token, per_page, recent_days, limiter, dry_run, prior_state
     )
+    if recent_days > 0 and not recent_summary.get("rate_limited"):
+        recent_synced_through = recent_started_utc.isoformat()
+    else:
+        recent_synced_through = prior_state.get("recent_synced_through_utc")
 
     page = 1
     total = 0
@@ -822,6 +851,8 @@ def sync_strava(dry_run: bool, prune_deleted: bool) -> Dict:
                 "last_run_utc": utc_now().isoformat(),
             }
         state_update["activity_scope"] = activity_scope
+        if recent_synced_through:
+            state_update["recent_synced_through_utc"] = recent_synced_through
         _save_state(state_update)
 
     total_fetched = total + int(recent_summary.get("fetched", 0))
