@@ -8409,5 +8409,18 @@
     "start_date_local": "2026-10-16T11:24:44Z",
     "type": "Hike",
     "year": 2026
+  },
+  {
+    "date": "2026-10-18",
+    "distance": 2096.4,
+    "elevation_gain": 26.3,
+    "id": "20652057733",
+    "moving_time": 2467.0,
+    "name": "Japanese gardens",
+    "raw_activity_type": "Walk",
+    "raw_type": "Walk",
+    "start_date_local": "2026-10-18T12:12:52Z",
+    "type": "Walk",
+    "year": 2026
   }
 ]
