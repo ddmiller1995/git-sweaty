@@ -5831,6 +5831,15 @@
       "type": "Walk",
       "url": "https://www.strava.com/activities/20652057733",
       "year": 2026
+    },
+    {
+      "date": "2026-10-20",
+      "hour": 6,
+      "name": "30 min HIIT Ride with Alex Toussaint",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/20661409040",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -10708,6 +10717,15 @@
           "distance": 38375.8,
           "elevation_gain": 250.0,
           "moving_time": 5753.0
+        },
+        "2026-10-20": {
+          "activity_ids": [
+            "20661409040"
+          ],
+          "count": 1,
+          "distance": 14055.9,
+          "elevation_gain": 0.0,
+          "moving_time": 1800.0
         }
       },
       "RockClimbing": {
@@ -11543,7 +11561,7 @@
       }
     }
   },
-  "generated_at": "2026-10-19T20:19:44.830927+00:00",
+  "generated_at": "2026-10-20T18:52:28.519126+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,

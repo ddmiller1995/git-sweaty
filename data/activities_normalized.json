@@ -8422,5 +8422,18 @@
     "start_date_local": "2026-10-18T12:12:52Z",
     "type": "Walk",
     "year": 2026
+  },
+  {
+    "date": "2026-10-20",
+    "distance": 14055.9,
+    "elevation_gain": 0.0,
+    "id": "20661409040",
+    "moving_time": 1800.0,
+    "name": "30 min HIIT Ride with Alex Toussaint",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-10-20T06:43:35Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
