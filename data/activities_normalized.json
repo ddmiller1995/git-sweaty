@@ -8474,5 +8474,18 @@
     "start_date_local": "2026-10-28T12:04:31Z",
     "type": "Walk",
     "year": 2026
+  },
+  {
+    "date": "2026-10-29",
+    "distance": 12800.2,
+    "elevation_gain": 81.0,
+    "id": "20784335706",
+    "moving_time": 2065.0,
+    "name": "New bike day! \ud83d\udeb2",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-10-29T14:28:18Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
