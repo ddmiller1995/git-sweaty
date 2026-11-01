@@ -8487,5 +8487,31 @@
     "start_date_local": "2026-10-29T14:28:18Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-10-30",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "20808553436",
+    "moving_time": 1921.0,
+    "name": "Upper",
+    "raw_activity_type": "WeightTraining",
+    "raw_type": "WeightTraining",
+    "start_date_local": "2026-10-30T17:15:57Z",
+    "type": "WeightTraining",
+    "year": 2026
+  },
+  {
+    "date": "2026-10-31",
+    "distance": 9998.1,
+    "elevation_gain": 887.0,
+    "id": "20808561769",
+    "moving_time": 8481.0,
+    "name": "Beautiful day in the neighborhood",
+    "raw_activity_type": "Hike",
+    "raw_type": "Hike",
+    "start_date_local": "2026-10-31T08:53:09Z",
+    "type": "Hike",
+    "year": 2026
   }
 ]

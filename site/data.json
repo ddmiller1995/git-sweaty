@@ -5876,6 +5876,24 @@
       "type": "Ride",
       "url": "https://www.strava.com/activities/20784335706",
       "year": 2026
+    },
+    {
+      "date": "2026-10-30",
+      "hour": 17,
+      "name": "Upper",
+      "subtype": "WeightTraining",
+      "type": "WeightTraining",
+      "url": "https://www.strava.com/activities/20808553436",
+      "year": 2026
+    },
+    {
+      "date": "2026-10-31",
+      "hour": 8,
+      "name": "Beautiful day in the neighborhood",
+      "subtype": "Hike",
+      "type": "Hike",
+      "url": "https://www.strava.com/activities/20808561769",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -10093,6 +10111,15 @@
           "distance": 7371.6,
           "elevation_gain": 403.0,
           "moving_time": 7372.0
+        },
+        "2026-10-31": {
+          "activity_ids": [
+            "20808561769"
+          ],
+          "count": 1,
+          "distance": 9998.1,
+          "elevation_gain": 887.0,
+          "moving_time": 8481.0
         }
       },
       "NordicSki": {
@@ -11582,6 +11609,15 @@
           "distance": 0.0,
           "elevation_gain": 0.0,
           "moving_time": 1200.0
+        },
+        "2026-10-30": {
+          "activity_ids": [
+            "20808553436"
+          ],
+          "count": 1,
+          "distance": 0.0,
+          "elevation_gain": 0.0,
+          "moving_time": 1921.0
         }
       },
       "Workout": {
@@ -11633,7 +11669,7 @@
       }
     }
   },
-  "generated_at": "2026-10-31T19:00:44.584462+00:00",
+  "generated_at": "2026-11-01T19:19:38.340902+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
