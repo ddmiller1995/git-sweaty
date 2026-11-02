@@ -8513,5 +8513,18 @@
     "start_date_local": "2026-10-31T08:53:09Z",
     "type": "Hike",
     "year": 2026
+  },
+  {
+    "date": "2026-11-01",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "20824165188",
+    "moving_time": 1200.0,
+    "name": "Upper",
+    "raw_activity_type": "WeightTraining",
+    "raw_type": "WeightTraining",
+    "start_date_local": "2026-11-01T16:59:40Z",
+    "type": "WeightTraining",
+    "year": 2026
   }
 ]
