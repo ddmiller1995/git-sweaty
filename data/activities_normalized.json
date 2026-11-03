@@ -8526,5 +8526,31 @@
     "start_date_local": "2026-11-01T16:59:40Z",
     "type": "WeightTraining",
     "year": 2026
+  },
+  {
+    "date": "2026-11-02",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "20836581265",
+    "moving_time": 1200.0,
+    "name": "Legs and core",
+    "raw_activity_type": "WeightTraining",
+    "raw_type": "WeightTraining",
+    "start_date_local": "2026-11-02T16:00:00Z",
+    "type": "WeightTraining",
+    "year": 2026
+  },
+  {
+    "date": "2026-11-03",
+    "distance": 11190.1,
+    "elevation_gain": 71.0,
+    "id": "20844232947",
+    "moving_time": 1790.0,
+    "name": "Morning Commute",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-11-03T07:14:38Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
