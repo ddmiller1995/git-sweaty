@@ -5921,6 +5921,15 @@
       "type": "Ride",
       "url": "https://www.strava.com/activities/20844232947",
       "year": 2026
+    },
+    {
+      "date": "2026-11-03",
+      "hour": 15,
+      "name": "Afternoon Commute",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/20850350146",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -10846,12 +10855,13 @@
         },
         "2026-11-03": {
           "activity_ids": [
-            "20844232947"
+            "20844232947",
+            "20850350146"
           ],
-          "count": 1,
-          "distance": 11190.1,
-          "elevation_gain": 71.0,
-          "moving_time": 1790.0
+          "count": 2,
+          "distance": 25669.6,
+          "elevation_gain": 255.0,
+          "moving_time": 4327.0
         }
       },
       "RockClimbing": {
@@ -11723,7 +11733,7 @@
       }
     }
   },
-  "generated_at": "2026-11-03T20:44:57.774953+00:00",
+  "generated_at": "2026-11-04T21:01:44.732701+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,

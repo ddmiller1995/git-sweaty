@@ -8552,5 +8552,18 @@
     "start_date_local": "2026-11-03T07:14:38Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-11-03",
+    "distance": 14479.5,
+    "elevation_gain": 184.0,
+    "id": "20850350146",
+    "moving_time": 2537.0,
+    "name": "Afternoon Commute",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-11-03T15:18:26Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
