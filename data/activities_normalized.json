@@ -8565,5 +8565,18 @@
     "start_date_local": "2026-11-03T15:18:26Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-11-05",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "20877177606",
+    "moving_time": 1823.0,
+    "name": "Afternoon Rock Climb",
+    "raw_activity_type": "RockClimbing",
+    "raw_type": "RockClimbing",
+    "start_date_local": "2026-11-05T16:01:09Z",
+    "type": "RockClimbing",
+    "year": 2026
   }
 ]
