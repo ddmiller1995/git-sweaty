@@ -8630,5 +8630,18 @@
     "start_date_local": "2026-11-09T17:00:31Z",
     "type": "WeightTraining",
     "year": 2026
+  },
+  {
+    "date": "2026-11-10",
+    "distance": 10045.8,
+    "elevation_gain": 0.0,
+    "id": "20941101046",
+    "moving_time": 1200.0,
+    "name": "20 min HIIT & Hills Ride with Ally Love",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-11-10T17:11:16Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
