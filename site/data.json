@@ -5984,6 +5984,15 @@
       "type": "Ride",
       "url": "https://www.strava.com/activities/20941101046",
       "year": 2026
+    },
+    {
+      "date": "2026-11-12",
+      "hour": 7,
+      "name": "Morning Ride",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/20961627895",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -10934,6 +10943,15 @@
           "distance": 10045.8,
           "elevation_gain": 0.0,
           "moving_time": 1200.0
+        },
+        "2026-11-12": {
+          "activity_ids": [
+            "20961627895"
+          ],
+          "count": 1,
+          "distance": 11214.9,
+          "elevation_gain": 72.0,
+          "moving_time": 2058.0
         }
       },
       "RockClimbing": {
@@ -11841,7 +11859,7 @@
       }
     }
   },
-  "generated_at": "2026-11-11T21:42:03.663919+00:00",
+  "generated_at": "2026-11-12T21:41:46.626157+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
