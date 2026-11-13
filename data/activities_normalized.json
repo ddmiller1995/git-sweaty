@@ -8650,10 +8650,23 @@
     "elevation_gain": 72.0,
     "id": "20961627895",
     "moving_time": 2058.0,
-    "name": "Morning Ride",
+    "name": "Morning commute",
     "raw_activity_type": "Ride",
     "raw_type": "Ride",
     "start_date_local": "2026-11-12T07:53:23Z",
+    "type": "Ride",
+    "year": 2026
+  },
+  {
+    "date": "2026-11-12",
+    "distance": 11238.5,
+    "elevation_gain": 146.0,
+    "id": "20966502419",
+    "moving_time": 2109.0,
+    "name": "Afternoon commute",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-11-12T15:45:45Z",
     "type": "Ride",
     "year": 2026
   }
