@@ -8669,5 +8669,31 @@
     "start_date_local": "2026-11-12T15:45:45Z",
     "type": "Ride",
     "year": 2026
+  },
+  {
+    "date": "2026-11-14",
+    "distance": 22061.7,
+    "elevation_gain": 0.0,
+    "id": "20990480344",
+    "moving_time": 2700.0,
+    "name": "45 min Hip Hop Ride with Ally Love",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-11-14T14:44:50Z",
+    "type": "Ride",
+    "year": 2026
+  },
+  {
+    "date": "2026-11-14",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "20990821837",
+    "moving_time": 1558.0,
+    "name": "Afternoon Arms and Core",
+    "raw_activity_type": "WeightTraining",
+    "raw_type": "WeightTraining",
+    "start_date_local": "2026-11-14T15:34:13Z",
+    "type": "WeightTraining",
+    "year": 2026
   }
 ]
