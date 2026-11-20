@@ -6038,6 +6038,15 @@
       "type": "Ride",
       "url": "https://www.strava.com/activities/21028404054",
       "year": 2026
+    },
+    {
+      "date": "2026-11-19",
+      "hour": 15,
+      "name": "Afternoon Ride",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/21053314012",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -11017,6 +11026,15 @@
           "distance": 20116.0,
           "elevation_gain": 212.0,
           "moving_time": 3815.0
+        },
+        "2026-11-19": {
+          "activity_ids": [
+            "21053314012"
+          ],
+          "count": 1,
+          "distance": 15402.0,
+          "elevation_gain": 218.0,
+          "moving_time": 2767.0
         }
       },
       "RockClimbing": {
@@ -11933,7 +11951,7 @@
       }
     }
   },
-  "generated_at": "2026-11-19T22:32:25.599978+00:00",
+  "generated_at": "2026-11-20T22:05:22.252051+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
