@@ -6056,6 +6056,24 @@
       "type": "Hike",
       "url": "https://www.strava.com/activities/21087351062",
       "year": 2026
+    },
+    {
+      "date": "2026-11-25",
+      "hour": 11,
+      "name": "30 min HIIT & Hills Ride with Sam Yo",
+      "subtype": "Ride",
+      "type": "Ride",
+      "url": "https://www.strava.com/activities/21123856569",
+      "year": 2026
+    },
+    {
+      "date": "2026-11-25",
+      "hour": 12,
+      "name": "Lunch Weight Training",
+      "subtype": "WeightTraining",
+      "type": "WeightTraining",
+      "url": "https://www.strava.com/activities/21124016329",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -11053,6 +11071,15 @@
           "distance": 15402.0,
           "elevation_gain": 218.0,
           "moving_time": 2767.0
+        },
+        "2026-11-25": {
+          "activity_ids": [
+            "21123856569"
+          ],
+          "count": 1,
+          "distance": 13664.9,
+          "elevation_gain": 0.0,
+          "moving_time": 1800.0
         }
       },
       "RockClimbing": {
@@ -11918,6 +11945,15 @@
           "distance": 0.0,
           "elevation_gain": 0.0,
           "moving_time": 1558.0
+        },
+        "2026-11-25": {
+          "activity_ids": [
+            "21124016329"
+          ],
+          "count": 1,
+          "distance": 0.0,
+          "elevation_gain": 0.0,
+          "moving_time": 521.0
         }
       },
       "Workout": {
@@ -11969,7 +12005,7 @@
       }
     }
   },
-  "generated_at": "2026-11-24T23:43:34.700661+00:00",
+  "generated_at": "2026-11-25T23:27:28.345007+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,

@@ -8747,5 +8747,31 @@
     "start_date_local": "2026-11-22T08:28:28Z",
     "type": "Hike",
     "year": 2026
+  },
+  {
+    "date": "2026-11-25",
+    "distance": 13664.9,
+    "elevation_gain": 0.0,
+    "id": "21123856569",
+    "moving_time": 1800.0,
+    "name": "30 min HIIT & Hills Ride with Sam Yo",
+    "raw_activity_type": "Ride",
+    "raw_type": "Ride",
+    "start_date_local": "2026-11-25T11:15:44Z",
+    "type": "Ride",
+    "year": 2026
+  },
+  {
+    "date": "2026-11-25",
+    "distance": 0.0,
+    "elevation_gain": 0.0,
+    "id": "21124016329",
+    "moving_time": 521.0,
+    "name": "Lunch Weight Training",
+    "raw_activity_type": "WeightTraining",
+    "raw_type": "WeightTraining",
+    "start_date_local": "2026-11-25T12:49:52Z",
+    "type": "WeightTraining",
+    "year": 2026
   }
 ]
