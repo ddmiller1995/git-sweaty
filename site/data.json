@@ -6076,12 +6076,30 @@
       "year": 2026
     },
     {
+      "date": "2026-11-25",
+      "hour": 15,
+      "name": "Afternoon Walk",
+      "subtype": "Walk",
+      "type": "Walk",
+      "url": "https://www.strava.com/activities/21146383029",
+      "year": 2026
+    },
+    {
       "date": "2026-11-26",
       "hour": 9,
       "name": "Turkey Trot",
       "subtype": "Walk",
       "type": "Walk",
       "url": "https://www.strava.com/activities/21134441826",
+      "year": 2026
+    },
+    {
+      "date": "2026-11-27",
+      "hour": 11,
+      "name": "Lunch Trail Run",
+      "subtype": "TrailRun",
+      "type": "TrailRun",
+      "url": "https://www.strava.com/activities/21146245067",
       "year": 2026
     }
   ],
@@ -11475,6 +11493,17 @@
           "moving_time": 673.0
         }
       },
+      "TrailRun": {
+        "2026-11-27": {
+          "activity_ids": [
+            "21146245067"
+          ],
+          "count": 1,
+          "distance": 4960.8,
+          "elevation_gain": 216.0,
+          "moving_time": 2709.0
+        }
+      },
       "Walk": {
         "2026-01-31": {
           "activity_ids": [
@@ -11628,6 +11657,15 @@
           "distance": 3222.7,
           "elevation_gain": 12.0,
           "moving_time": 2936.0
+        },
+        "2026-11-25": {
+          "activity_ids": [
+            "21146383029"
+          ],
+          "count": 1,
+          "distance": 3714.8,
+          "elevation_gain": 8.2,
+          "moving_time": 3736.0
         },
         "2026-11-26": {
           "activity_ids": [
@@ -12023,7 +12061,7 @@
       }
     }
   },
-  "generated_at": "2026-11-26T23:26:29.494144+00:00",
+  "generated_at": "2026-11-27T23:09:47.878765+00:00",
   "goals": {
     "count": 200,
     "distance": 1609344.0,
@@ -12072,6 +12110,10 @@
       "accent": "#fee440",
       "label": "Stair Stepper"
     },
+    "TrailRun": {
+      "accent": "#00bbf9",
+      "label": "Trail Run"
+    },
     "VirtualRide": {
       "accent": "#fee440",
       "label": "Virtual Ride"
@@ -12099,6 +12141,7 @@
     "Run",
     "Snowshoe",
     "StairStepper",
+    "TrailRun",
     "VirtualRide",
     "Walk",
     "WeightTraining",
